@@ -16,7 +16,7 @@ class Signup extends Component {
     const email = this.state.email;
     const role = this.state.role;
 
-    this.service.signup(username, password, email)
+    this.service.signup(username, password, email, role)
     .then( response => {
         this.setState({
             username: "", 
@@ -58,7 +58,7 @@ class Signup extends Component {
 
           <fieldset>
           <label>¿Eres comprador o vendedor?</label>
-          <select name="user" value={this.state.role} onChange={e => this.handleChange(e)}>
+          <select name="role" value={this.state.role} onChange={e => this.handleChange(e)}>
             <option value="buyer">Comprador</option>
             <option value="seller">Vendedor</option>
           </select>
