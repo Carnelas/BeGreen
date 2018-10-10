@@ -4,7 +4,7 @@ const Schema = mongoose.Schema;
 const itemSchema = new Schema({
   itemname: String,
   class: { type: String, enum: ["fruits", "vegetables"] },
-  price: number
+  price: String
 });
 
 const Item = mongoose.model('Item', itemSchema);

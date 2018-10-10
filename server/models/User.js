@@ -8,8 +8,8 @@ const userSchema = new Schema({
   adress: String,
   role: {
     type: String,
-    enum: ['User', 'Seller'],
-    default: 'User'
+    enum: ['Buyer', 'Seller'],
+    default: 'Buyer'
   }
 });
 

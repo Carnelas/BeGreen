@@ -11,7 +11,7 @@ const orderSchema = new Schema({
         type: String,
         enum: ['items']
     },
-    orderNumber: number
+    orderNumber: String
 });
 
 const Order = mongoose.model('Order', orderSchema);
