@@ -19,7 +19,8 @@ export class newItem extends React.Component {
                 }
             })
 }
-//revisar los onChange de abajo
+//revisar los onChange de abajo \/ \/ \/
+
 render(){
     let {name, seller, price} = this.state;
     // let name = this.state.name;
@@ -28,8 +29,10 @@ render(){
         <div> 
             <label>Nombre del producto</label>
             <input type="text" value={name} onChange={e=> this.setState({title:e.currentTarget.value})}/>
-            <label>Description</label>
-            <input type="text" value={description} onChange={e=> this.setState({description:e.currentTarget.value})}/>
+            <label>Vendedor</label>
+            <input type="text" value={seller} onChange={e=> this.setState({seller:e.currentTarget.value})}/>
+            <label>Precio</label>
+            <input type="text" value={price} onChange={e=> this.setState({price:e.currentTarget.value})}/>
             <button onClick={this.submitForm}>Edit this project</button>
         </div>
     );
