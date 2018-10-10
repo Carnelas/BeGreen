@@ -2,13 +2,13 @@ import React, { Component } from 'react';
 import './App.css';
 import { Switch, Route } from 'react-router-dom';
 
-// import ProjectList from './components/projects/ProjectList';
 import Navbar from './components/navbar/Navbar';
-// import ProjectDetails from './components/projects/ProjectDetails';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents'
+
+//importar lo que acabo de crear en componentes cuando estos sirvan para algo
 
 class App extends Component {
 
