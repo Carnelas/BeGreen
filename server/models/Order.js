@@ -7,10 +7,7 @@ const orderSchema = new Schema({
         type: String,
         enum: [String]
     },
-    items: {
-        type: String,
-        enum: ['items']
-    },
+    items: Array,
     orderNumber: String
 });
 
