@@ -3,10 +3,7 @@ const Schema = mongoose.Schema;
 
 const orderSchema = new Schema({
     buyer: String,
-    seller: {
-        type: String,
-        enum: [String]
-    },
+    seller: String,
     items: Array,
     orderNumber: String
 });
