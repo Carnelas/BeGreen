@@ -3,7 +3,7 @@ const router = express.Router();
 const Item = require('../models/Item');
 
 
-//preguntar cómo hacer que coja él solo el seller
+//preguntar cómo hacer que coja él solo el seller (desde el front)
 router.post('/add', (req, res, next) => {
     const { itemName, seller, price } = req.body;
 
@@ -16,6 +16,19 @@ router.post('/add', (req, res, next) => {
 
 })
 
+// borrar los objetos por ID
+router.delete('/:id',(req,res,next) => {
+    const {id} = req.params;
+    Model.findByIdAndRemove(id)
+        .then( obj => {
+            if(obj){
+                res.status(200).json({status:`Removed from db`});
+            }else{
+                throw new Error("Not existing ID");
+            }
+        })
+        .catch(e => next(e))
+})
 
 /* router.use((err, req, res, next) => {
     res.status(500).json({ message: err.message });

@@ -23,12 +23,14 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <nav className="nav-style">
-          <ul>
-            <li><a onClick={this.handleLogout}>Logout</a></li>
-          </ul>
+        <ul>
+          <li><Link to='/Signup'>Signup</Link></li>
+          <li><Link to='/Login'>Login</Link></li>
+          <li><button onClick={this.handleLogout}>Logout</button></li>
+        </ul>
 
-          <h2>Welcome, {this.state.loggedInUser.username}</h2>
-        </nav>
+        <h2>Welcome, {this.state.loggedInUser.username}</h2>
+      </nav>
       )
     } else {
       return (
@@ -46,3 +48,4 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+

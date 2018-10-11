@@ -7,18 +7,19 @@ import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents'
+import SellingItems from './components/contents/SellingItems'
 
 //importar lo que acabo de crear en componentes cuando estos sirvan para algo
 
 class App extends Component {
 
-  constructor(props){
+  constructor(props) {
     super(props)
     this.state = { loggedInUser: null };
     this.service = new AuthService();
   }
 
-  getTheUser= (userObj) => {
+  getTheUser = (userObj) => {
     this.setState({
       loggedInUser: userObj
     })
@@ -26,37 +27,41 @@ class App extends Component {
 
   logout = () => {
     this.service.logout()
-    .then(() => {
-      this.setState({ loggedInUser: null });
-    })
+      .then(() => {
+        this.setState({ loggedInUser: null });
+      })
   }
 
-  fetchUser(){
-    if( this.state.loggedInUser === null ){
+  fetchUser() {
+    if (this.state.loggedInUser === null) {
       this.service.loggedin()
-      .then(response =>{
-        this.setState({
-          loggedInUser:  response
-        }) 
-      })
-      .catch( err =>{
-        this.setState({
-          loggedInUser:  false
-        }) 
-      })
+        .then(response => {
+          this.setState({
+            loggedInUser: response
+          })
+        })
+        .catch(err => {
+          this.setState({
+            loggedInUser: false
+          })
+        })
     }
   }
 
   render() {
     this.fetchUser()
 
-    if(this.state.loggedInUser){
+    if (this.state.loggedInUser) {
       return (
         <div className="App">
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
+          {/* crear el componente de listado de items (itemlist)
+            <Route exact path='/itemlist' render={() => 
+            <itemlist userInSession={this.state.loggedInUser}/>}/> */}
             <Contents></Contents>
           </header>
+            <SellingItems />
         </div>
       );
     } else {
@@ -65,8 +70,11 @@ class App extends Component {
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Switch>
-              <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser}/>}/>
-              <Route exact path='/login' render={() => <Login getUser={this.getTheUser}/>}/>
+             {/*  Esto quiere decir que cuando la barra de direcciones tenga '/signup' te 
+              renderizará el <signup getUser, que aplica getTheUser, que está creado
+              más arriba */}
+              <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser} />} />
+              <Route exact path='/login' render={() => <Login getUser={this.getTheUser} />} />
             </Switch>
           </header>
         </div>
