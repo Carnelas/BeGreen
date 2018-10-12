@@ -9,6 +9,8 @@ import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents'
 import SellingItems from './components/contents/SellingItems'
 import Seller from './components/contents/Seller'
+import Items from './components/contents/Items'
+import Add from './components/contents/Add'
 
 
 //importar lo que acabo de crear en componentes cuando estos sirvan para algo
@@ -60,7 +62,11 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
           {/* crear el componente de listado de items (itemlist) */}
             <Route exact path='/Seller' render={() => 
-            <Seller userInSession={this.state.loggedInUser}/>}/> 
+            <div>
+            <Seller userInSession={this.state.loggedInUser}/>
+            <Add/>  
+            </div>        
+          }/> 
             <Route exact path='/' render={() =>
             <Contents></Contents>}/>
           </header>
