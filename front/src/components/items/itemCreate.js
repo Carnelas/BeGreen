@@ -1,3 +1,11 @@
+/*
+
+
+
+creo que esto no sirve
+
+
+
 import React from 'react';
 import axios from 'axios';
 
@@ -7,7 +15,8 @@ export class newItem extends React.Component {
         this.state = {
             name: props.name, //¿igual que solo name?
             seller: props.seller,
-            price: props.price
+            price: props.price,
+            qty: props.qty
         }
     }
 
@@ -22,7 +31,7 @@ export class newItem extends React.Component {
 //revisar los onChange de abajo \/ \/ \/
 
 render(){
-    let {name, seller, price} = this.state;
+    let {name, seller, price, qty} = this.state;
     // let name = this.state.name;
     // same con los demás
     return (
@@ -37,4 +46,4 @@ render(){
         </div>
     );
 }
-}
+} */

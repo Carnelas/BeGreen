@@ -5,12 +5,13 @@ const Item = require('../models/Item');
 
 //preguntar cómo hacer que coja él solo el seller (desde el front)
 router.post('/add', (req, res, next) => {
-    const { itemName, seller, price } = req.body;
+    const { itemName, seller, price, qty } = req.body;
 
     return new Item({
         itemName,
         seller,
-        price
+        price,
+        qty
     }).save().then(() => {res.status(200).json({status: 'objeto guardado'})})
     .catch(e => next(e));
 

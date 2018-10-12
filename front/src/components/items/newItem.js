@@ -1,3 +1,8 @@
+/* 
+
+
+esto de momento no sirve
+
 import React from 'react';
 import axios from 'axios';
 
@@ -19,4 +24,4 @@ export class newItem extends React.Component {
                 }
             })
     }
-}
+} */

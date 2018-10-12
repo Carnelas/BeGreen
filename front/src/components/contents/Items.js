@@ -8,8 +8,8 @@ class Items {
     });
   }
 
-  add = (itemName, seller, price) => {
-    return this.service.post('/add', {itemName, seller, price})
+  add = (itemName, seller, price, qty) => {
+    return this.service.post('/add', {itemName, seller, price, qty})
     .then(response => response.data)
   }
 

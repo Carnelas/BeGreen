@@ -10,8 +10,8 @@ class Routes {
       });
     }
 
-    addItem = (itemName, seller, price) => {
-        return this.service.post('/add', {itemName, seller, price})
+    addItem = (itemName, seller, price, qty) => {
+        return this.service.post('/add', {itemName, seller, price, qty})
         .then(response => response.data)
       }
 
