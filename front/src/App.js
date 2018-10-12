@@ -11,6 +11,7 @@ import SellingItems from './components/contents/SellingItems'
 import Seller from './components/contents/Seller'
 import Items from './components/contents/Items'
 import Add from './components/contents/Add'
+import Profile from './components/contents/Profile'
 
 
 //importar lo que acabo de crear en componentes cuando estos sirvan para algo
@@ -60,17 +61,21 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
-          {/* crear el componente de listado de items (itemlist) */}
-            <Route exact path='/Seller' render={() => 
-            <div>
-            <Seller userInSession={this.state.loggedInUser}/>
-            <Add/>  
-            </div>        
-          }/> 
-            <Route exact path='/' render={() =>
-            <Contents></Contents>}/>
           </header>
-            <SellingItems />
+          <div>
+            {/* home */}
+            <Route exact path='/' render={() =>
+              <Contents></Contents>} />
+            {/* Perfil personal de cada vendedor */}
+            <Route exact path='/Seller' render={() =>
+              <div><Seller userInSession={this.state.loggedInUser} />
+                <Add /></div>} />
+            {/* Perfil de ventas de cada vendedor */}
+            <Route exact path='/Profile' render={() =>
+              <div><Profile userInSession={this.state.loggedInUser} />
+                <SellingItems /></div>} />
+
+          </div>
         </div>
       );
     } else {
@@ -79,7 +84,7 @@ class App extends Component {
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Switch>
-             {/*  Esto quiere decir que cuando la barra de direcciones tenga '/signup' te 
+              {/*  Esto quiere decir que cuando la barra de direcciones tenga '/signup' te 
               renderizará el <signup getUser, que aplica getTheUser, que está creado
               más arriba */}
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser} />} />

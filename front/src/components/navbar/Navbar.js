@@ -27,7 +27,8 @@ class Navbar extends Component {
           <li><Link to='/'>Home</Link></li>
           <li><Link to='/Signup'>Signup</Link></li>
           <li><Link to='/Login'>Login</Link></li>
-          <li><Link to='/Seller'>Perfil del vendedor</Link></li>
+          <li><Link to='/Seller'>Perfil personal del vendedor</Link></li>
+          <li><Link to='/Profile'>Perfil de ventas del vendedor</Link></li>
           <li><button onClick={this.handleLogout}>Logout</button></li>
         </ul>
 

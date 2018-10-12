@@ -1,3 +1,5 @@
+//este lo trae desde el back, por eso importa axios
+
 import axios from 'axios';
 
 class Items {

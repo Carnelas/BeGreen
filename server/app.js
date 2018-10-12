@@ -74,6 +74,7 @@ const authRouter = require('./routes/auth');
 const itemCreator = require('./routes/itemCreate')
 app.use('/api/auth', authRouter);
 app.use('/api/itemCreate', itemCreator);
+
 app.use('/api/item', require('./models/Item'));
 app.use('/api/user', require('./models/User'));
 app.use('/api/order', require('./models/Order'));

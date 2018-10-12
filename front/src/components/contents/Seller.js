@@ -7,7 +7,7 @@ class Seller extends Component {
     render() {
         return (
             <div>
-              <h1>Hola, esto es el perfil del vendedor. Hubo sequía y no tiene productos a la venta.</h1>
+              <h1>Hola, esto es el perfil del vendedor. Aqui puedes poner objetos a la venta</h1>
             </div>
         )
     }
