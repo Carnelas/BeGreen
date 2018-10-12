@@ -8,6 +8,8 @@ import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents'
 import SellingItems from './components/contents/SellingItems'
+import Seller from './components/contents/Seller'
+
 
 //importar lo que acabo de crear en componentes cuando estos sirvan para algo
 
@@ -56,10 +58,11 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
-          {/* crear el componente de listado de items (itemlist)
-            <Route exact path='/itemlist' render={() => 
-            <itemlist userInSession={this.state.loggedInUser}/>}/> */}
-            <Contents></Contents>
+          {/* crear el componente de listado de items (itemlist) */}
+            <Route exact path='/Seller' render={() => 
+            <Seller userInSession={this.state.loggedInUser}/>}/> 
+            <Route exact path='/' render={() =>
+            <Contents></Contents>}/>
           </header>
             <SellingItems />
         </div>
