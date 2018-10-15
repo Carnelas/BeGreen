@@ -10,12 +10,12 @@ class Items {
       withCredentials: true
     });
   }
-  add = (itemName, seller, price, qty) => {
-    return this.service.post('/add', { itemName, seller, price, qty })
+  item = (itemName, seller, price, qty) => {
+    return this.service.post('/item', { itemName, seller, price, qty })
       .then(response => response.data)
   }
   showItems = () => {
-    return this.service.get('/add')
+    return this.service.get('/item')
       .then(response => {
         return response.data
       })

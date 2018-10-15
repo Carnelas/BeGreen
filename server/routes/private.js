@@ -4,7 +4,7 @@ const Item = require('../models/Item');
 
 
 //preguntar cómo hacer que coja él solo el seller (desde el front)
-router.post('/add', (req, res, next) => {
+router.post('/item', (req, res, next) => {
     const { itemName, seller, price, qty } = req.body;
 
     return new Item({
@@ -18,7 +18,7 @@ router.post('/add', (req, res, next) => {
 })
 
 //recoger articulos desde la base de datos
-router.get('/add', (req,res,next) => {
+router.get('/item', (req,res,next) => {
     Item.find()
     .then(data => res.status(200).json(data))
     .catch(e => next(e))
@@ -41,5 +41,26 @@ router.get('/add', (req,res,next) => {
 /* router.use((err, req, res, next) => {
     res.status(500).json({ message: err.message });
 }) */
+
+router.get('/items/:id', (req, res, next)=>{
+
+    if(!mongoose.Types.ObjectId.isValid(req.params.id)) {
+      res.status(400).json({ message: 'Specified id is not valid' });
+      return;
+    }
+  
+    // our projects have array of tasks' ids and 
+    // we can use .populate() method to get the whole task objects
+    //                                   ^
+    //                                   |
+    //                                   |
+    Project.findById(req.params.id).populate('tasks')
+      .then(response => {
+        res.json(response);
+      })
+      .catch(err => {
+        res.json(err);
+      })
+  })
 
 module.exports = router;

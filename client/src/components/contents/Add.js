@@ -17,7 +17,7 @@ class Add extends Component {
     const price = this.state.price;
     const qty = this.state.qty;
 
-    this.service.add(itemName, seller, price, qty)
+    this.service.item(itemName, seller, price, qty)
       .then(response => {
         this.setState({
           itemName: "",
