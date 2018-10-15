@@ -8,7 +8,7 @@ import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents'
 import Seller from './components/contents/Seller'
-import Items from './components/contents/Items'
+import Private from './components/contents/Private'
 import Add from './components/contents/Add'
 import SaleItems from './components/contents/SaleItems'
 
