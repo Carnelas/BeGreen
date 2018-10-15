@@ -3,7 +3,7 @@
 
 import axios from 'axios';
 
-class Private {
+class Items {
   constructor() {
     this.service = axios.create({
       baseURL: 'http://localhost:3010/api/private',
@@ -21,4 +21,4 @@ class Private {
       })
   }
 }
-export default Private;
+export default Items;

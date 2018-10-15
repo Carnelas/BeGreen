@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Private from './Private'
+import Items from './Items'
 
 //añade items al back
 
@@ -7,7 +7,7 @@ class Add extends Component {
   constructor(props) {
     super(props);
     this.state = { itemName: '', seller: '', price: '', qty: '' };
-    this.service = new Private();
+    this.service = new Items();
   }
 
   handleFormSubmit = (event) => {

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Private from './Private';
+import Items from './Items';
 
 
 class SaleItems extends Component {

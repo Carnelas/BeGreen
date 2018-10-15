@@ -6,11 +6,13 @@ import Navbar from './components/navbar/Navbar';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
-import Contents from './components/contents/Contents'
-import Seller from './components/contents/Seller'
-import Private from './components/contents/Private'
-import Add from './components/contents/Add'
-import SaleItems from './components/contents/SaleItems'
+import Contents from './components/contents/Contents';
+import Seller from './components/contents/Seller';
+import Items from './components/contents/Items';
+import Add from './components/contents/Add';
+import SaleItems from './components/contents/SaleItems';
+import Footer from './components/footer/Footer';
+
 
 
 //importar lo que acabo de crear en componentes cuando estos sirvan para algo
@@ -73,7 +75,7 @@ class App extends Component {
             <Route exact path='/SaleItems' render={() =>
               <div><SaleItems userInSession={this.state.loggedInUser} />
               </div>} />
-
+              <Footer />
           </div>
         </div>
       );
