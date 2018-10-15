@@ -6,7 +6,7 @@ class SellingItems extends Component {
   //mirar cómo muestra los proyectos marc
   constructor(props) {
     super(props);
-    this.state = {  }
+    this.state = {}
     this.service = new Items();
   }
 
@@ -20,25 +20,37 @@ class SellingItems extends Component {
 
   render() {
     console.log(this.state.items)
-    if(this.state.items)
-    return (
-      <div>
-        <p>Esto mostrará los artículos a la venta</p>
-        <div>{this.state.items.map(item => {
-          return (
-            <div key={item.itemName}>
-              <div> 
-                <h3>{item.itemName}</h3>
-                <h4>{item.seller}</h4>
-                <h4>{item.price}</h4>
+    if (this.state.items)
+      return (
+        <div>
+          <p>Esto mostrará los artículos a la venta</p>
+          <div className="columns">
+
+          <div>{this.state.items.map(item => {
+            return (
+                <div className="column">
+                  <div key={item.itemName}>
+                  </div>
+                  <div>
+                    <div className="column">
+                      <p>{item.itemName}</p>
+                    </div>
+                    <div className="column">
+                      <p>{item.seller}</p>
+                    </div>
+                    <div className="column">
+                      <p>{item.price}</p>
+                    </div>
+                  </div>
               </div>
-            </div>
-          )
-        })}
-        </div>
-      </div>)
-    else 
-    return(<div></div>)
+            )
+          })}
+                          </div>
+
+          </div>
+        </div>)
+    else
+      return (<div></div>)
   }
 }
 
