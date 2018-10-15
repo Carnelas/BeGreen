@@ -22,29 +22,79 @@ class Navbar extends Component {
   render() {
     if (this.state.loggedInUser) {
       return (
-        <nav className="nav-style">
-        <ul>
-          <li><Link to='/'>Home</Link></li>
-          <li><Link to='/Signup'>Signup</Link></li>
-          <li><Link to='/Login'>Login</Link></li>
-          <li><Link to='/Seller'>Perfil personal del vendedor</Link></li>
-          <li><Link to='/Profile'>Perfil de ventas del vendedor</Link></li>
-          <li><button onClick={this.handleLogout}>Logout</button></li>
-        </ul>
+        <div>
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <a class="navbar-item" href="#">
+              <img src="https://www.punanaamio.fi/media/catalog/product/cache/5/thumbnail/56x/9df78eab33525d08d6e5fb8d27136e95/s/m/sm144-homer-simpson-julkkisnaamari.jpg" width="112" height="28"></img>
+            </a>
+          </div>
 
-        <h2>Hola, {this.state.loggedInUser.username}</h2>
-      </nav>
+          <div className="navbar-menu">
+            <div className="navbar-start">
+              <a className="navbar-item">
+                <Link to='/'>Home-r</Link>
+              </a>
+
+              <a className="navbar-item">
+                <Link to='/Seller'>Perfil vendedor</Link>
+              </a>
+
+              <a className="navbar-item">
+                <Link to='/Profile'>Productos a la venta</Link>
+              </a>
+            </div>
+            <div class="navbar-end">
+              <div class="navbar-item">
+                <div class="buttons">
+                  <a class="button is-light">
+                    <button onClick={this.handleLogout}>Logout</button>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+        <div>
+          <h2>Hola, {this.state.loggedInUser.username}</h2>
+          </div>
+        </div>
       )
     } else {
       return (
-        <div>
-          <nav className="nav-style">
-            <ul>
-            <li><Link to='/signup'>Signup</Link></li>
-            <li><Link to='/login'>Login</Link></li>
-            </ul>
-          </nav>
-        </div>
+
+        <nav className="navbar" role="navigation" aria-label="main navigation">
+          <div className="navbar-brand">
+            <a class="navbar-item" href="#">
+              <img src="https://www.punanaamio.fi/media/catalog/product/cache/5/thumbnail/56x/9df78eab33525d08d6e5fb8d27136e95/s/m/sm144-homer-simpson-julkkisnaamari.jpg" width="112" height="28"></img>
+            </a>
+          </div>
+
+          <div className="navbar-menu">
+            <div className="navbar-start">
+              <a className="navbar-item">
+                <Link to='/'>Home-r</Link>
+              </a>
+              <div class="navbar-item has-dropdown is-hoverable">
+                <a class="navbar-link">
+                  More
+                </a>
+                <div class="navbar-dropdown">
+                  <a class="navbar-item">
+                    <Link to='/Signup'>Signup</Link>
+                  </a>
+                  <a class="navbar-item">
+                    <Link to='/Login'>Login</Link>
+                  </a>
+                  <a class="navbar-item">
+                    Contact
+          </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </nav>
+
       )
     }
   }
