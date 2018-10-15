@@ -42,30 +42,46 @@ class Add extends Component {
         <h3>¿Qué quieres poner a la venta?</h3>
 
         <form onSubmit={this.handleFormSubmit}>
-          <fieldset>
-            <label>Artículo</label>
-            <input type="text" name="itemName" value={this.state.itemName} onChange={e => this.handleChange(e)} />
-          </fieldset>
+          <div class="field">
+            <div class="control">
+              <fieldset>
+                {/* <label>Artículo</label> */}
+                <input class="input" placeholder="Artículo" type="text" name="itemName" value={this.state.itemName} onChange={e => this.handleChange(e)} />
+              </fieldset>
+            </div>
+          </div>
 
-          <fieldset>
-            <label>Vendedor:</label>
-            <input type="text" name="seller" value={this.state.seller} onChange={e => this.handleChange(e)} />
-          </fieldset>
+          <div class="field">
+          <div class="control">
+            <fieldset>
+{/*               <label>Vendedor:</label>
+ */}              <input class="input" placeholder="Vendedor" type="text" name="seller" value={this.state.seller} onChange={e => this.handleChange(e)} />
+            </fieldset>
+          </div>
+          </div>
 
-          <fieldset>
-            <label>Precio:</label>
-            <input type="number" name="price" value={this.state.price} onChange={e => this.handleChange(e)} />
-          </fieldset>
+ <div class="field">
+          <div class="control">
+        <fieldset>
+{/*           <label>Precio:</label>
+ */}          <input class="input" placeholder="Precio" type="number" name="price" value={this.state.price} onChange={e => this.handleChange(e)} />
+        </fieldset>
+        </div>
+          </div>
 
-          <fieldset>
-            <label>Cantidad:</label>
-            <input type="number" name="qty" value={this.state.qty} onChange={e => this.handleChange(e)} />
-          </fieldset>
+ <div class="field">
+          <div class="control">
+        <fieldset>
+{/*           <label>Cantidad:</label>
+ */}          <input class="input" placeholder="Cantidad" type="number" name="qty" value={this.state.qty} onChange={e => this.handleChange(e)} />
+        </fieldset>
+         </div>
+         </div>
 
-          <input type="submit" value="Add" />
+        <input type="submit" value="Add" />
         </form>
 
-      </div>
+      </div >
     )
   }
 }
