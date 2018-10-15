@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Items from './Items'
 
+//añade items al back
+
 class Add extends Component {
   constructor(props) {
     super(props);

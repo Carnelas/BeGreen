@@ -4,7 +4,6 @@
 
 // esto cargará el listado de items en la página de perfil de cada vendedor
 
-
 import React,{Component} from 'react';
 import axios from 'axios';
 import { Items } from './Items';

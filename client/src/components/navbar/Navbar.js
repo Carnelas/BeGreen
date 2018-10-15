@@ -32,7 +32,7 @@ class Navbar extends Component {
           <li><button onClick={this.handleLogout}>Logout</button></li>
         </ul>
 
-        <h2>Welcome, {this.state.loggedInUser.username}</h2>
+        <h2>Hola, {this.state.loggedInUser.username}</h2>
       </nav>
       )
     } else {
@@ -51,4 +51,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-

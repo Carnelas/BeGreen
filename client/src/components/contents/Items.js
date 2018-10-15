@@ -10,26 +10,15 @@ class Items {
       withCredentials: true
     });
   }
-
   add = (itemName, seller, price, qty) => {
     return this.service.post('/add', { itemName, seller, price, qty })
       .then(response => response.data)
   }
-
-  /*  esto borrará los items. 
-  
-      delete = () => {
-      return this.service.get('/delete',)
-      .then(response => response.data)
-    } */
-
   showItems = () => {
     return this.service.get('/add')
       .then(response => {
-        return response.data})
+        return response.data
+      })
   }
-
-
-
 }
 export default Items;
