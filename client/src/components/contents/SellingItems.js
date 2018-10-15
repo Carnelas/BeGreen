@@ -11,7 +11,6 @@ class SellingItems extends Component {
   }
 
   componentDidMount() {
-    console.log("entra")
     this.service.showItems()
       .then(res => {
         this.setState({ items: [...res] })
