@@ -10,7 +10,8 @@ const userSchema = new Schema({
     enum: ['buyer', 'seller'],
     default: 'buyer'
   },
-  profileImage: String
+  profileImage: String,
+  adress: String
 });
 
 const User = mongoose.model('User', userSchema);

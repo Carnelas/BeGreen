@@ -26,7 +26,7 @@ class Navbar extends Component {
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <a class="navbar-item" href="#">
-              <img src="https://www.punanaamio.fi/media/catalog/product/cache/5/thumbnail/56x/9df78eab33525d08d6e5fb8d27136e95/s/m/sm144-homer-simpson-julkkisnaamari.jpg" width="112" height="28"></img>
+              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28"></img>
             </a>
           </div>
 
@@ -41,7 +41,7 @@ class Navbar extends Component {
               </a>
 
               <a className="navbar-item">
-                <Link to='/Profile'>Productos a la venta</Link>
+                <Link to='/SaleItems'>Productos a la venta</Link>
               </a>
             </div>
             <div class="navbar-end">
@@ -66,7 +66,7 @@ class Navbar extends Component {
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <a class="navbar-item" href="#">
-              <img src="https://www.punanaamio.fi/media/catalog/product/cache/5/thumbnail/56x/9df78eab33525d08d6e5fb8d27136e95/s/m/sm144-homer-simpson-julkkisnaamari.jpg" width="112" height="28"></img>
+              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28"></img>
             </a>
           </div>
 

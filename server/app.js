@@ -66,9 +66,6 @@ app.use(session({
 }));
 require('./passport')(app);
 
-// default value for title local
-app.locals.title = 'Express - Generated with IronGenerator';
-
 // meter aqui los modelos
 const authRouter = require('./routes/auth');
 const private = require('./routes/private')

@@ -7,11 +7,10 @@ import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents'
-import SellingItems from './components/contents/SellingItems'
 import Seller from './components/contents/Seller'
 import Items from './components/contents/Items'
 import Add from './components/contents/Add'
-import Profile from './components/contents/Profile'
+import SaleItems from './components/contents/SaleItems'
 
 
 //importar lo que acabo de crear en componentes cuando estos sirvan para algo
@@ -71,9 +70,9 @@ class App extends Component {
               <div><Seller userInSession={this.state.loggedInUser} />
                 <Add /></div>} />
             {/* Perfil de ventas de cada vendedor */}
-            <Route exact path='/Profile' render={() =>
-              <div><Profile userInSession={this.state.loggedInUser} />
-                <SellingItems /></div>} />
+            <Route exact path='/SaleItems' render={() =>
+              <div><SaleItems userInSession={this.state.loggedInUser} />
+              </div>} />
 
           </div>
         </div>

@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Items from './Items';
 
 
-class SellingItems extends Component {
+class SaleItems extends Component {
   //mirar cómo muestra los proyectos marc
   constructor(props) {
     super(props);
@@ -24,29 +24,23 @@ class SellingItems extends Component {
       return (
         <div>
           <p>Esto mostrará los artículos a la venta</p>
-          <div className="columns">
-
-          <div>{this.state.items.map(item => {
+          <div className="columns">{this.state.items.map(item => {
             return (
+              <div className="column">
+                <div key={item.itemName}>
+                </div>
                 <div className="column">
-                  <div key={item.itemName}>
-                  </div>
-                  <div>
-                    <div className="column">
-                      <p>{item.itemName}</p>
-                    </div>
-                    <div className="column">
-                      <p>{item.seller}</p>
-                    </div>
-                    <div className="column">
-                      <p>{item.price}</p>
-                    </div>
-                  </div>
+                  <p>{item.itemName}</p>
+                </div>
+                <div className="column">
+                  <p>{item.seller}</p>
+                </div>
+                <div className="column">
+                  <p>{item.price}</p>
+                </div>
               </div>
             )
           })}
-                          </div>
-
           </div>
         </div>)
     else
@@ -54,4 +48,4 @@ class SellingItems extends Component {
   }
 }
 
-export default SellingItems;
+export default SaleItems;
