@@ -8,11 +8,9 @@ import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
 import Seller from './components/contents/Seller';
-import Items from './components/contents/Items';
 import AddItems from './components/contents/AddItems';
 import SaleItems from './components/contents/SaleItems';
 import Footer from './components/footer/Footer';
-import User from './components/contents/User';
 import ShowUsers from './components/contents/ShowUsers';
 
 
@@ -77,7 +75,10 @@ class App extends Component {
             <Route exact path='/SaleItems' render={() =>
               <div><SaleItems userInSession={this.state.loggedInUser} />
               </div>} />
-              <Footer />
+            <Route exact path='/ShowUsers' render={() =>
+              <div><ShowUsers userInSession={this.state.loggedInUser} />
+              </div>} />
+            <Footer />
           </div>
         </div>
       );

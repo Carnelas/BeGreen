@@ -18,7 +18,6 @@ class SaleItems extends Component {
 
 
   render() {
-    console.log(this.state.items)
     if (this.state.items)
       return (
         <div>

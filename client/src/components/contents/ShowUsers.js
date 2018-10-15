@@ -18,12 +18,13 @@ class ShowUsers extends Component {
 
 
     render() {
-        console.log(this.state.users)
+        console.log(this.state.users + "<<<<<<<<<<<<<<<<<<<<<<<<<<")
         if (this.state.users)
             return (
                 <div>
+                    {/* MUESTRA ESTO PERO NO EL MAP - Gabi - */}
                     <p>Esto mostrará los usuarios a la venta</p>
-                    <div>{this.state.users.map(item => {
+                    <div>{this.state.users.map(user => {
                         return (
                             <div>
                                 <div key={User.username}>

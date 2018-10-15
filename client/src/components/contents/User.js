@@ -7,7 +7,9 @@ class User {
       withCredentials: true
     });
   }
-  item = (username, password, email, role) => {
+  // No tengo ningun post en la ruta del back donde lo estoy situando
+  // (private), quizá es por eso    ????
+  user = (username, password, email, role) => {
     return this.service.post('/user', { username, password, email, role })
       .then(response => response.data)
   }

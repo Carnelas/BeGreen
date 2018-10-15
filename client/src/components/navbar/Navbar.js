@@ -26,7 +26,7 @@ class Navbar extends Component {
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <a class="navbar-item" href="#">
-              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28"></img>
+              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28" alt="logo"></img>
             </a>
           </div>
 
@@ -42,6 +42,10 @@ class Navbar extends Component {
 
               <a className="navbar-item">
                 <Link to='/SaleItems'>Productos a la venta</Link>
+              </a>
+
+              <a className="navbar-item">
+              <Link to='/ShowUsers'>Usuarios a la venta</Link>
               </a>
             </div>
             <div class="navbar-end">
@@ -66,7 +70,7 @@ class Navbar extends Component {
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <a class="navbar-item" href="#">
-              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28"></img>
+              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28" alt="logo"></img>
             </a>
           </div>
 
