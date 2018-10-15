@@ -9,6 +9,7 @@ class Profile extends Component {
             <div>
               <h1>Hola, esto es el perfil de ventas del vendedor. Hubo sequía y no tiene productos a la venta.</h1>
             </div>
+            
         )
     }
 }

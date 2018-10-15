@@ -72,6 +72,7 @@ app.locals.title = 'Express - Generated with IronGenerator';
 // meter aqui los modelos
 const authRouter = require('./routes/auth');
 const itemCreator = require('./routes/itemCreate')
+
 app.use('/api/auth', authRouter);
 app.use('/api/itemCreate', itemCreator);
 

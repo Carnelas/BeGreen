@@ -1,4 +1,5 @@
-//este lo trae desde el back, por eso importa axios
+//este lo añade al back
+//servicio de rutas
 
 import axios from 'axios';
 
@@ -11,13 +12,22 @@ class Items {
   }
 
   add = (itemName, seller, price, qty) => {
-    return this.service.post('/add', {itemName, seller, price, qty})
-    .then(response => response.data)
+    return this.service.post('/add', { itemName, seller, price, qty })
+      .then(response => response.data)
   }
 
+  /*  esto borrará los items. 
+  
+      delete = () => {
+      return this.service.get('/delete',)
+      .then(response => response.data)
+    } */
 
-
-
+  showItems = () => {
+    return this.service.get('/add')
+      .then(response => {
+        return response.data})
+  }
 
 
 
