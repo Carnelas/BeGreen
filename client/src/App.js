@@ -9,7 +9,7 @@ import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
 import Seller from './components/contents/Seller';
 import Items from './components/contents/Items';
-import Add from './components/contents/Add';
+import AddItems from './components/contents/AddItems';
 import SaleItems from './components/contents/SaleItems';
 import Footer from './components/footer/Footer';
 
@@ -70,7 +70,7 @@ class App extends Component {
             {/* Perfil personal de cada vendedor */}
             <Route exact path='/Seller' render={() =>
               <div><Seller userInSession={this.state.loggedInUser} />
-                <Add /></div>} />
+                <AddItems /></div>} />
             {/* Perfil de ventas de cada vendedor */}
             <Route exact path='/SaleItems' render={() =>
               <div><SaleItems userInSession={this.state.loggedInUser} />

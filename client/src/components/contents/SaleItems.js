@@ -38,9 +38,13 @@ class SaleItems extends Component {
                 <div className="column">
                   <p>{item.price}</p>
                 </div>
+                <div className="column">
+                  <p>{item.qty}</p>
+                </div>
               </div>
             )
           })}
+
           </div>
         </div>)
     else
