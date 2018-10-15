@@ -72,7 +72,6 @@ const private = require('./routes/private')
 
 app.use('/api/auth', authRouter);
 app.use('/api/private', private);
-
 app.use('/api/item', require('./models/Item'));
 app.use('/api/user', require('./models/User'));
 app.use('/api/order', require('./models/Order'));

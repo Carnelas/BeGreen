@@ -3,7 +3,6 @@ import Items from './Items';
 
 
 class SaleItems extends Component {
-  //mirar cómo muestra los proyectos marc
   constructor(props) {
     super(props);
     this.state = {}

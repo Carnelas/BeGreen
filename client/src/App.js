@@ -12,6 +12,8 @@ import Items from './components/contents/Items';
 import AddItems from './components/contents/AddItems';
 import SaleItems from './components/contents/SaleItems';
 import Footer from './components/footer/Footer';
+import User from './components/contents/User';
+import ShowUsers from './components/contents/ShowUsers';
 
 
 
