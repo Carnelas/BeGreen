@@ -23,7 +23,12 @@ router.get('/item', (req, res, next) => {
         .catch(e => next(e))
 })
 
-
+// {seller: seller} ?? Gabi
+router.get('/item/seller', (req, res, next) => {
+    Item.find({ seller: seller })
+        .then(data => res.status(200).json(data))
+        .catch(e => next(e))
+})
 
 router.get('/user', (req, res, next) => {
     User.find({ role: "seller" })
@@ -41,34 +46,36 @@ router.get('/user/:_id', (req, res, next) => {
 
 router.post('/signupRest', (req, res, next) => {
 
-    const { name, password, email, adress, owner } = req.body;
+    const { name, phone, description, adress, owner } = req.body;
 
-    if (!name || !password || !email || !adress || !owner) {
+    if (!name || !phone || !description || !adress || !owner) {
         next(new Error('You must provide valid credentials'));
     }
 
-    User.findOne({ name })
+    Restaurant.findOne({ name })
         .then(foundRestaurant => {
             if (foundRestaurant) throw new Error('Restaurant already exists');
-            const salt = bcrypt.genSaltSync(10);
-            const hashPass = bcrypt.hashSync(password, salt);
-
             return new Restaurant({
                 name,
-                password: hashPass,
-                email,
+                phone,
+                description,
                 adress,
                 owner
             }).save();
         })
-        .then(savedRestaurant => login(req, savedRestaurant)) // Login the user using passport
-        .then(restaurant => res.json({ status: 'signup & login successfully', restaurant })) // Answer JSON
+        .then(restaurant => res.json({ status: 'signup successfully', restaurant })) // Answer JSON
         .catch(e => next(e));
 }); 
 
 //esto devolverá todos los restaurantes
 router.get('/restaurant', (req, res, next) => {
     Restaurant.find({})
+        .then(data => res.status(200).json(data))
+        .catch(e => next(e))
+})
+
+router.get('/restaurant/:_id', (req, res, next) => {
+    Restaurant.findById({ _id: req.params._id })
         .then(data => res.status(200).json(data))
         .catch(e => next(e))
 })

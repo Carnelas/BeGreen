@@ -12,10 +12,9 @@ import AddItems from './components/contents/AddItems';
 import SaleItems from './components/contents/SaleItems';
 import Footer from './components/footer/Footer';
 import ShowUsers from './components/contents/ShowUsers';
+import ShowRest from './components/contents/ShowRestaurants';
+import SignupRest from './components/contents/SignupRest';
 
-
-
-//importar lo que acabo de crear en componentes cuando estos sirvan para algo
 
 class App extends Component {
 
@@ -77,6 +76,12 @@ class App extends Component {
               </div>} />
             <Route exact path='/ShowUsers' render={() =>
               <div><ShowUsers userInSession={this.state.loggedInUser} />
+              </div>} />
+            <Route exact path='/SignupRest' render={() =>
+              <div><SignupRest userInSession={this.state.loggedInUser} />
+              </div>} />
+            <Route exact path='/ShowRest' render={() =>
+              <div><ShowRest userInSession={this.state.loggedInUser} />
               </div>} />
             <Footer />
           </div>

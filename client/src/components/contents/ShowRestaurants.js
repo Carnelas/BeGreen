@@ -1,33 +1,33 @@
 import React, { Component } from 'react';
-import User from './User';
+import Restaurant from './Restaurant';
 
 
-class ShowUsers extends Component {
+class showRestaurants extends Component {
     constructor(props) {
         super(props);
         this.state = {}
-        this.service = new User();
+        this.service = new Restaurant();
     }
 
     componentDidMount() {
-        this.service.showUsers()
+        this.service.showRestaurants()
             .then(res => {
-                const users = res;
-                this.setState({ users })
+                const restaurants = res;
+                this.setState({ restaurants })
             })
     }
 
 
     render() {
-        if (this.state.users)
+        if (this.state.restaurants)
             return (
                 <div>
-                    <p>Esto mostrará los usuarios a la venta: </p>
-                    {this.state.users.map((user, index) => {
+                    <p>Restaurantes que usan productos BeGreen: </p>
+                    {this.state.restaurants.map((restaurant, index) => {
                         return (
                             <div key={index}>
                                 <div>
-                                    <p>{user.username}</p>
+                                    <p>{restaurant.name}</p>
                                 </div>
                             </div>
                         )
@@ -40,4 +40,4 @@ class ShowUsers extends Component {
     }
 }
 
-export default ShowUsers;
+export default showRestaurants;

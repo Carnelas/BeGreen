@@ -21,7 +21,7 @@ class SaleItems extends Component {
     if (this.state.items)
       return (
         <div>
-          <p>Esto mostrará los artículos a la venta</p>
+          <p>Esto mostrará los artículos a la venta: </p>
           <div className="columns">{this.state.items.map(item => {
             return (
               <div className="column">
