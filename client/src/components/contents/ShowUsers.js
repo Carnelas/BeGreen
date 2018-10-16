@@ -13,10 +13,7 @@ class ShowUsers extends Component {
         this.service.showUsers()
             .then(res => {
                 const users = res;
-                console.log(users)
-
                 this.setState({ users })
-                console.log(this.state)
             })
     }
 
