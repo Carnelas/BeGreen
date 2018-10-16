@@ -5,11 +5,11 @@ const User = require('../models/User');
 const Restaurant = require('../models/Restaurant');
 
 router.post('/item', (req, res, next) => {
-    const { itemName, seller, price, qty } = req.body;
+    const { itemName, sellerId, price, qty } = req.body;
 
     return new Item({
         itemName,
-        seller,
+        sellerId,
         price,
         qty
     }).save().then(() => { res.status(200).json({ status: 'objeto guardado' }) })
@@ -23,9 +23,9 @@ router.get('/item', (req, res, next) => {
         .catch(e => next(e))
 })
 
-// {seller: seller} ?? Gabi
-router.get('/item/seller', (req, res, next) => {
-    Item.find({ seller: seller })
+// ?? Gabi || requerir todos los objetos con un mismo sellerId 
+router.get('/item/sellerId', (req, res, next) => {
+    Item.find({ sellerId: req.params.sellerId })
         .then(data => res.status(200).json(data))
         .catch(e => next(e))
 })

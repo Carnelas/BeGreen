@@ -105,3 +105,57 @@ class Navbar extends Component {
 }
 
 export default Navbar;
+
+/* 
+<div className="hero-head">
+            <nav className="navbar">
+              <div className="container">
+                <div className="navbar-brand">
+                  <a className="navbar-item" href="../">
+                    <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" alt="Logo" width="112" height="28"/>
+                  </a>
+                  <span className="navbar-burger burger" data-target="navbarMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                  </span>
+                </div>
+                <div id="navbarMenu" className="navbar-menu">
+                  <div className="navbar-end">
+                    <span className="navbar-item">
+                      <a className="button is-white is-outlined" href="#">
+                        <span className="icon">
+                          <i className="fa fa-home"/>
+                        </span>
+                        <Link to='/'>Home</Link>
+                      </a>
+                    </span>
+                    <span className="navbar-item">
+                      <a className="button is-white is-outlined" href="#">
+                        <span className="icon">
+                          <i className="fa fa-superpowers"></i>
+                        </span>
+                        <span>Examples</span>
+                      </a>
+                    </span>
+                    <span className="navbar-item">
+                      <a className="button is-white is-outlined" href="#">
+                        <span className="icon">
+                          <i className="fa fa-book"></i>
+                        </span>
+                        <span>Documentation</span>
+                      </a>
+                    </span>
+                    <span className="navbar-item">
+                      <a className="button is-white is-outlined" href="https://github.com/dansup/bulma-templates/blob/master/templates/landing.html">
+                        <span className="icon">
+                          <i className="fa fa-github"></i>
+                        </span>
+                        <span>View Source</span>
+                      </a>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </nav>
+          </div> */

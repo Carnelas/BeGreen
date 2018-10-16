@@ -31,7 +31,7 @@ class SaleItems extends Component {
                   <p>{item.itemName}</p>
                 </div>
                 <div className="column">
-                  <p>{item.seller}</p>
+                  <p>{item.sellerId}</p>
                 </div>
                 <div className="column">
                   <p>{item.price}</p>

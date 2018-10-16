@@ -1,26 +1,28 @@
 import React, { Component } from 'react';
-import Items from './Items'
+import Items from './Items';
+import User from './User';
+
 
 
 class AddItems extends Component {
   constructor(props) {
     super(props);
-    this.state = { itemName: '', seller: '', price: '', qty: '' };
+    this.state = { itemName: '', sellerId: '', price: '', qty: '' };
     this.service = new Items();
+    this.seller = new User();
   }
 
   handleFormSubmit = (event) => {
     event.preventDefault();
     const itemName = this.state.itemName;
-    const seller = this.state.seller;
+    const sellerId = this.state.sellerId;
     const price = this.state.price;
     const qty = this.state.qty;
-
-    this.service.item(itemName, seller, price, qty)
+    this.service.item(itemName, sellerId, price, qty)
       .then(response => {
         this.setState({
           itemName: "",
-          seller: "",
+          sellerId: "",
           price: "",
           qty: ""
         });
@@ -32,6 +34,14 @@ class AddItems extends Component {
   handleChange = (event) => {
     const { name, value } = event.target;
     this.setState({ [name]: value });
+  }
+
+  componentDidMount() {
+    this.seller.showUsers()
+      .then(res => {
+        const users = res;
+        this.setState({ users })
+      })
   }
 
 
@@ -49,13 +59,27 @@ class AddItems extends Component {
             </div>
           </div>
 
-          <div class="field">
+          {/* crear un select que itere (haga map) entre los usuarios con rol de vendedor
+ */}
+  {/*    || Gabi help     <div class="field">
             <div class="control">
               <fieldset>
-                <input class="input" placeholder="Vendedor" type="text" name="seller" value={this.state.seller} onChange={e => this.handleChange(e)} />
+                <select>
+                  {this.state.users.map((user) => {
+                    return (
+                      <div key={user}>
+                        <div>
+                          <p>{user.username}</p>
+                        </div>
+                      </div>
+                    )
+                    })
+                  }
+                      < input class= "input" placeholder="Vendedor" type="text" name="sellerId" value={this.state.sellerId} onChange={e => this.handleChange(e)} />
+                </select>
               </fieldset>
             </div>
-          </div>
+          </div> */}
 
           <div class="field">
             <div class="control">

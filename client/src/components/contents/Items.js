@@ -8,8 +8,8 @@ class Items {
       withCredentials: true
     });
   }
-  item = (itemName, seller, price, qty) => {
-    return this.service.post('/item', { itemName, seller, price, qty })
+  item = (itemName, sellerId, price, qty) => {
+    return this.service.post('/item', { itemName, sellerId, price, qty })
       .then(response => response.data)
   }
   showItems = () => {
