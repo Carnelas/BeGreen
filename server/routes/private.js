@@ -64,7 +64,7 @@ router.post('/signupRest', (req, res, next) => {
         .then(savedRestaurant => login(req, savedRestaurant)) // Login the user using passport
         .then(restaurant => res.json({ status: 'signup & login successfully', restaurant })) // Answer JSON
         .catch(e => next(e));
-});
+}); 
 
 //esto devolverá todos los restaurantes
 router.get('/restaurant', (req, res, next) => {
