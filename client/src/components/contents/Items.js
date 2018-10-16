@@ -1,5 +1,3 @@
-//este lo añade al back
-//servicio de rutas
 
 import axios from 'axios';
 

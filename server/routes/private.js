@@ -3,7 +3,6 @@ const router = express.Router();
 const Item = require('../models/Item');
 const User = require('../models/User')
 
-
 //preguntar cómo hacer que coja él solo el seller (desde el front)
 router.post('/item', (req, res, next) => {
     const { itemName, seller, price, qty } = req.body;
@@ -17,7 +16,6 @@ router.post('/item', (req, res, next) => {
         .catch(e => next(e));
 
 })
-
 //recoger articulos desde la base de datos
 router.get('/item', (req, res, next) => {
     Item.find()
@@ -25,16 +23,18 @@ router.get('/item', (req, res, next) => {
         .catch(e => next(e))
 })
 
-// Gabi 
 // - quiero que me devuelva todos los objetos, por eso no le paso parámetro -
+
+
+//filtrar por rol
 router.get('/user', (req, res, next) => {
     User.find()
         .then(data => res.status(200).json(data))
         .catch(e => next(e))
 })
 
-//Gabi socorro 
 router.get('/user/:_id', (req, res, next) => {
+    console.log(req.params._id)
     User.findById({ _id: req.params._id })
         .then(data => res.status(200).json(data))
         .catch(e => next(e))

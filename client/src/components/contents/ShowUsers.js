@@ -12,31 +12,31 @@ class ShowUsers extends Component {
     componentDidMount() {
         this.service.showUsers()
             .then(res => {
-                this.setState({ users: [...res] })
+                const users = res;
+                console.log(users)
+
+                this.setState({ users })
+                console.log(this.state)
             })
     }
 
 
     render() {
-        console.log(this.state.users + "<<<<<<<<<<<<<<<<<<<<<<<<<<")
         if (this.state.users)
             return (
                 <div>
-                    {/* MUESTRA ESTO PERO NO EL MAP - Gabi - */}
                     <p>Esto mostrará los usuarios a la venta</p>
-                    <div>{this.state.users.map(user => {
+                    {this.state.users.map((user, index) => {
                         return (
-                            <div>
-                                <div key={User.username}>
-                                </div>
+                            <div key={index}>
                                 <div>
-                                    <p>{User.username}</p>
+                                    <p>{user.username}</p>
                                 </div>
                             </div>
                         )
                     })}
 
-                    </div>
+                    
                 </div>)
         else
             return (<div></div>)
