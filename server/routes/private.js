@@ -26,15 +26,13 @@ router.get('/item', (req, res, next) => {
 // - quiero que me devuelva todos los objetos, por eso no le paso parámetro -
 
 
-//filtrar por rol
 router.get('/user', (req, res, next) => {
-    User.find()
+    User.find( {role:"seller"})
         .then(data => res.status(200).json(data))
         .catch(e => next(e))
 })
 
 router.get('/user/:_id', (req, res, next) => {
-    console.log(req.params._id)
     User.findById({ _id: req.params._id })
         .then(data => res.status(200).json(data))
         .catch(e => next(e))
