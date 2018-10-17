@@ -68,9 +68,6 @@ class Navbar extends Component {
             </div>
           </div>
         </nav>
-        <div>
-          <h2>Hola, {this.state.loggedInUser.username}</h2>
-          </div>
         </div>
       )
     } else {
