@@ -8,12 +8,19 @@ class Items {
       withCredentials: true
     });
   }
-  item = (itemName, sellerId, price, qty) => {
-    return this.service.post('/item', { itemName, sellerId, price, qty })
+  item = (itemName, sellerId, sellerName, price, qty) => {
+    return this.service.post('/item', { itemName, sellerId, sellerName, price, qty })
       .then(response => response.data)
   }
   showItems = () => {
     return this.service.get('/item')
+      .then(response => {
+        return response.data
+      })
+  }
+
+  showSellerItems = () => {
+    return this.service.get('/item/sellerId')
       .then(response => {
         return response.data
       })

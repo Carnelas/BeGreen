@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 class Contents extends Component {
   render() {
@@ -6,6 +7,7 @@ class Contents extends Component {
       <p>Esto es una landing page to guapa</p>
 
       <body>
+
         <section className="hero is-info is-fullheight">
 
 

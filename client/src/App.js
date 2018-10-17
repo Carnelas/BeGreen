@@ -53,6 +53,9 @@ class App extends Component {
     }
   }
 
+  
+
+
   render() {
     this.fetchUser()
 
@@ -82,6 +85,9 @@ class App extends Component {
               </div>} />
             <Route exact path='/ShowRest' render={() =>
               <div><ShowRest userInSession={this.state.loggedInUser} />
+              </div>} />
+              <Route exact path='/showSellerItems' render={() =>
+              <div><showSellerItems userInSession={this.state.loggedInUser} />
               </div>} />
             <Footer />
           </div>

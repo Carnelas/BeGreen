@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import User from './User';
+import { Link } from 'react-router-dom';
 
 
 class ShowUsers extends Component {
@@ -27,7 +28,7 @@ class ShowUsers extends Component {
                         return (
                             <div key={index}>
                                 <div>
-                                    <p>{user.username}</p>
+                                    <Link to={'/profile/' + user._id}>{user.username}</Link>
                                 </div>
                             </div>
                         )

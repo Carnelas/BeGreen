@@ -7,7 +7,7 @@ import User from './User';
 class AddItems extends Component {
   constructor(props) {
     super(props);
-    this.state = { itemName: '', sellerId: '', price: '', qty: '' };
+    this.state = { itemName: '', sellerId: '', sellerName: '', price: '', qty: '' };
     this.service = new Items();
     this.seller = new User();
   }
@@ -15,14 +15,16 @@ class AddItems extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     const itemName = this.state.itemName;
-    const sellerId = this.state.sellerId;
+    const {id, username} = JSON.parse(this.state.user);
     const price = this.state.price;
     const qty = this.state.qty;
-    this.service.item(itemName, sellerId, price, qty)
+    console.log(id, username)
+    this.service.item(itemName, id, username, price, qty)
       .then(response => {
         this.setState({
           itemName: "",
           sellerId: "",
+          sellerName: "",
           price: "",
           qty: ""
         });
@@ -59,25 +61,23 @@ class AddItems extends Component {
               </fieldset>
             </div>
           </div>
-
-          {/* crear un select que itere entre los usuarios con rol de vendedor
-   || Gabi help     <div class="field">
+          <div class="select">
             <div class="control">
               <fieldset>
-                <select>
-                  {this.seller.state.users.map((user) => {
+                <select name="user" onChange={e => this.handleChange(e) } >
+                  {
+                    this.state.users ? this.state.users.map((user) => {
                     return (
-                        <div>
-                          <p>{user.username}</p>
-                        </div>
+                      <option value={JSON.stringify({id:user._id,  username:user.username})}>
+                        {user.username}
+                      </option>
                     )
-                    })
+                  }) : ""
                   }
-                      < input class= "input" placeholder="Vendedor" type="text" name="sellerId" value={this.state.sellerId} onChange={e => this.handleChange(e)} />
                 </select>
               </fieldset>
             </div>
-          </div> */}
+          </div>
 
           <div class="field">
             <div class="control">
