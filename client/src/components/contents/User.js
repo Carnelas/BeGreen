@@ -8,8 +8,8 @@ class User {
     });
   }
 
-  user = (username, password, email, role) => {
-    return this.service.post('/user', { username, password, email, role })
+  user = (username, password, phone, role) => {
+    return this.service.post('/user', { username, password, phone, role })
       .then(response => response.data)
   }
   showUsers = () => {

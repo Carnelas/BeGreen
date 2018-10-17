@@ -40,25 +40,31 @@ class Login extends Component {
 
   render() {
 
-    return (<div>
-      <h3>¿Ya eres usuario? Entra aquí:</h3>
+    return (
+      <div>
+        <h3>¿Qué quieres poner a la venta?</h3>
+        <form onSubmit={this.handleFormSubmit}>
+          <div className="column is-6 is-offset-3">
+            <div className="field is-grouped is-grouped-centered">
+              <div className="control">
+                <fieldset>
+                  <input type="text" placeholder= "nombre" name="username" value={this.state.username} onChange={e => this.handleChange(e)}/>
+                </fieldset>
+              </div>
+            </div>
+            <div className="field is-grouped is-grouped-centered">
+              <div className="control">
+                <fieldset>
+                  <input type="password" placeholder= "contraseña" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/>
+                </fieldset>
+              </div>
+            </div>
+           </div>
+           <input type="submit" value="Login" className="button is-rounded is-focused is-hovered is-light" />
 
-      <form onSubmit={this.handleFormSubmit}>
-        <fieldset>
-          <label>Nombre de usuario:</label>
-          <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
-        </fieldset>
-
-        <fieldset>
-          <label>Contraseña:</label>
-          <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
-        </fieldset>
-
-        <input type="submit" value="Login" />
-      </form>
-
-      <h1>{this.state.error ? 'Error' : ''}</h1>
-    </div>)
+        </form>
+      </div>
+    )
   }
 }
 

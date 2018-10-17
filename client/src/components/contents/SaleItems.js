@@ -22,21 +22,18 @@ class SaleItems extends Component {
       return (
         <div>
           <p>Esto mostrará los artículos a la venta: </p>
-          <div className="columns">{this.state.items.map(item => {
+          <div className="">{this.state.items.map(item => {
             return (
-              <div className="column">
+              <div className="">
                 <div key={item.itemName}>
                 </div>
-                <div className="column">
-                  <p>{item.itemName}</p>
-                </div>
-                <div className="column">
+                <div className="">
                   <p>{item.sellerName}</p>
                 </div>
-                <div className="column">
+                <div className="">
                   <p>{item.price}</p>
                 </div>
-                <div className="column">
+                <div className="">
                   <p>{item.qty}</p>
                 </div>
               </div>

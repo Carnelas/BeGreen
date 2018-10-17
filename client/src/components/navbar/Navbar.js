@@ -26,7 +26,7 @@ class Navbar extends Component {
           <nav className="navbar" role="navigation" aria-label="main navigation">
             <div className="navbar-brand">
               <a className="navbar-item" href="#">
-                <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28" alt="logo"></img>
+                <img src="/images/logo-begreen.png" height="250" alt="logo"></img>
               </a>
             </div>
             <div className="navbar-menu">
@@ -54,12 +54,12 @@ class Navbar extends Component {
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
             <a className="navbar-item" href="#">
-              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28" alt="logo"></img>
+              <img src="/images/logo-begreen.png" height="250" alt="logo"></img>
             </a>
           </div>
 
           <div className="navbar-menu">
-            <div className="navbar-start">
+            <div className="navbar-start ">
               <Link to='/' className="navbar-item">Home</Link >
               <div className="navbar-item has-dropdown is-hoverable">
                 <a className="navbar-link">

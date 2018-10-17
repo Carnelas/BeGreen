@@ -7,14 +7,13 @@ import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Contents from './components/contents/Contents';
-import Seller from './components/contents/Seller';
 import AddItems from './components/contents/AddItems';
 import SaleItems from './components/contents/SaleItems';
 import Footer from './components/footer/Footer';
 import ShowUsers from './components/contents/ShowUsers';
 import ShowRest from './components/contents/ShowRestaurants';
 import SignupRest from './components/contents/SignupRest';
-import ShowSellerItems from './components/contents/showSellerItems'
+import ShowSellerItems from './components/contents/showSellerItems';
 
 class App extends Component {
 
@@ -71,8 +70,7 @@ class App extends Component {
               <Contents></Contents>} />
             {/* Perfil personal de cada vendedor */}
             <Route exact path='/Seller' render={() =>
-              <div><Seller userInSession={this.state.loggedInUser} />
-                <AddItems /></div>} />
+              <AddItems />} />
             {/* Perfil de ventas de cada vendedor */}
             <Route exact path='/SaleItems' render={() =>
               <div><SaleItems userInSession={this.state.loggedInUser} />

@@ -52,7 +52,6 @@ class AddItems extends Component {
     return (
       <div>
         <h3>¿Qué quieres poner a la venta?</h3>
-
         <form onSubmit={this.handleFormSubmit}>
           <div className="column is-6 is-offset-3">
             <div className="field is-grouped is-grouped-centered">
@@ -62,40 +61,40 @@ class AddItems extends Component {
                 </fieldset>
               </div>
             </div>
-            <div className="select">
+            <div className="field is-grouped is-grouped-centered">
               <div className="control">
-                <fieldset>
-                  <select name="user" onChange={e => this.handleChange(e)} >
-                    {
-                      this.state.users ? this.state.users.map((user) => {
-                        return (
-                          <option value={JSON.stringify({ id: user._id, username: user.username })}>
-                            {user.username}
-                          </option>
-                        )
-                      }) : ""
-                    }
-                  </select>
-                </fieldset>
+                <div className="select">
+                  <fieldset>
+                    <select name="user" onChange={e => this.handleChange(e)} >
+                      {
+                        this.state.users ? this.state.users.map((user) => {
+                          return (
+                            <option value={JSON.stringify({ id: user._id, username: user.username })}>
+                              {user.username}
+                            </option>
+                          )
+                        }) : ""
+                      }
+                    </select>
+                  </fieldset>
+                </div>
               </div>
             </div>
-
-            <div className="field">
+            <div className="field is-grouped is-grouped-centered">
               <div className="control">
                 <fieldset>
                   <input className="input" placeholder="Precio" type="number" name="price" value={this.state.price} onChange={e => this.handleChange(e)} />
                 </fieldset>
               </div>
             </div>
-
-            <div className="field">
+            <div className="field is-grouped is-grouped-centered">
               <div className="control">
                 <fieldset>
                   <input className="input" placeholder="Cantidad" type="number" name="qty" value={this.state.qty} onChange={e => this.handleChange(e)} />
                 </fieldset>
               </div>
             </div>
-            <input type="submit" value="AddItems" />
+            <input type="submit" value="AddItems" className="button is-rounded is-focused is-hovered is-light" />
           </div >
         </form>
       </div>
