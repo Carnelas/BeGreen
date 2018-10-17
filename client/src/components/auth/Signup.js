@@ -37,54 +37,52 @@ class Signup extends Component {
 
   render() {
     return (
-      <div>
+      <div className="signup">
         <h3>¡Bienvenido! Crea tu cuenta aquí:</h3>
-
         <form onSubmit={this.handleFormSubmit}>
           <div className="column is-6 is-offset-3">
             <div className="field is-grouped is-grouped-centered">
               <div className="control">
                 <fieldset>
-                  <label>Nombre de usuario:</label>
-                  <input type="text" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
+                  <input type="text" placeholder="Nombre" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
                 </fieldset>
               </div>
             </div>
-            <div className="field is-grouped is-grouped-centered"></div>
-            <div className="control">
-              <fieldset>
-                <label>Contraseña:</label>
-                <input type="password" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
-              </fieldset>
+            <div className="field is-grouped is-grouped-centered">
+              <div className="control">
+                <fieldset>
+                  <input type="password" placeholder="Contraseña" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
+                </fieldset>
+              </div>
+            </div>
+            <div className="field is-grouped is-grouped-centered">
+              <div className="control">
+                <fieldset>
+                  <input type="phone" placeholder="Teléfono" name="phone" value={this.state.phone} onChange={e => this.handleChange(e)} />
+                </fieldset>
+              </div>
             </div>
           </div>
           <div className="field is-grouped is-grouped-centered">
             <div className="control">
               <fieldset>
-                <label>Teléfono:</label>
-                <input type="text" name="phone" value={this.state.phone} onChange={e => this.handleChange(e)} />
-              </fieldset>
-            </div>
-          </div>
-          <div className="field is-grouped is-grouped-centered">
-            <div className="control">
-              <fieldset>
-                <label>¿Eres comprador o vendedor?</label>
-                <select name="role" value={this.state.role} onChange={e => this.handleChange(e)}>
+                <label>¿Eres comprador o vendedor? </label>
+                <select name="role" className="select is-rounded" value={this.state.role} onChange={e => this.handleChange(e)}>
                   <option value="buyer">Comprador</option>
                   <option value="seller">Vendedor</option>
                 </select>
               </fieldset>
             </div>
           </div>
-
-
-          <input type="submit" value="Sign up" />
+          <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light"/>
         </form>
-
       </div>
     )
   }
 }
 
 export default Signup;
+
+
+
+{/*  */ }

@@ -31,8 +31,22 @@ body {
   position: fixed;
 }
 
-header {
-  min-height: 20vh;
+.signup {
+  margin-top: 35vh;
+}
+
+.login {
+  margin-top: 35vh;
+}
+
+.AddItems{
+  margin-top: 25vh;
+}
+
+.ShowUsers{
+  margin-top: 25vh;
+  font-size: 3vh;
+  color: #fabada;
 }
 
 .navbar a {
@@ -45,7 +59,7 @@ header {
 }
 
 .App-link {
-  color: #61dafb;
+  color: #fabada;
 }
 
 fieldset {

@@ -41,8 +41,8 @@ class Login extends Component {
   render() {
 
     return (
-      <div>
-        <h3>¿Qué quieres poner a la venta?</h3>
+      <div className="login">
+        <h3>¡Hola! Bienvenido de nuevo</h3>
         <form onSubmit={this.handleFormSubmit}>
           <div className="column is-6 is-offset-3">
             <div className="field is-grouped is-grouped-centered">
