@@ -36,6 +36,7 @@ class AddItems extends Component {
     this.setState({ [name]: value });
   }
 
+  //revisar esto 
   componentDidMount() {
     this.seller.showUsers()
       .then(res => {
@@ -59,19 +60,16 @@ class AddItems extends Component {
             </div>
           </div>
 
-          {/* crear un select que itere (haga map) entre los usuarios con rol de vendedor
- */}
-  {/*    || Gabi help     <div class="field">
+          {/* crear un select que itere entre los usuarios con rol de vendedor
+   || Gabi help     <div class="field">
             <div class="control">
               <fieldset>
                 <select>
-                  {this.state.users.map((user) => {
+                  {this.seller.state.users.map((user) => {
                     return (
-                      <div key={user}>
                         <div>
                           <p>{user.username}</p>
                         </div>
-                      </div>
                     )
                     })
                   }

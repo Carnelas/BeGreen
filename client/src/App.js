@@ -93,9 +93,6 @@ class App extends Component {
           <header className="App-header">
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
             <Switch>
-              {/*  Esto quiere decir que cuando la barra de direcciones tenga '/signup' te 
-              renderizará el <signup getUser, que aplica getTheUser, que está creado
-              más arriba */}
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser} />} />
               <Route exact path='/login' render={() => <Login getUser={this.getTheUser} />} />
             </Switch>

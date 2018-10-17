@@ -47,6 +47,14 @@ class Navbar extends Component {
               <a className="navbar-item">
               <Link to='/ShowUsers'>Usuarios a la venta</Link>
               </a>
+
+              <a className="navbar-item">
+              <Link to='/ShowRest'>Indice rests</Link>
+              </a>
+
+              <a className="navbar-item">
+              <Link to='/Signuprest'>Registra rests</Link>
+              </a>
             </div>
             <div class="navbar-end">
               <div class="navbar-item">
