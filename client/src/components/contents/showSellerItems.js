@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from '../auth/AuthService';
-
+import Item from './Items'
 
 
 class showSellerItems extends Component {
@@ -16,7 +16,8 @@ class showSellerItems extends Component {
       }
 
     componentDidMount() {
-        this.service.showSellerItems()
+        
+        this.service.showSellerItems(this.props.params.id)
             .then(res => {
                 const items = res;
                 this.setState({ items })
@@ -25,15 +26,18 @@ class showSellerItems extends Component {
 
 
     render() {
+        console.log(this.props.params)
+        
         if (this.state.items)
             return (
                 <div>
-                    <p>Artículos que {this.state.loggedInUser.username} tiene a la venta: </p>
+                    {/* <p>Artículos que {this.state.loggedInUser.username} tiene a la venta: </p> */}
                     {this.state.items.map((item, index) => {
+                        console.log(item)
                         return (
                             <div key={index}>
                                 <div>
-                                    <p>{item.name}</p>
+                                    <p>{item.itemName}</p>
                                 </div>
                             </div>
                         )
@@ -42,7 +46,9 @@ class showSellerItems extends Component {
                     
                 </div>)
         else
-            return (<div></div>)
+            return (<div>
+                <p>HOLA</p>
+            </div>)
     }
 }
 

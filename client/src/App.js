@@ -14,7 +14,7 @@ import Footer from './components/footer/Footer';
 import ShowUsers from './components/contents/ShowUsers';
 import ShowRest from './components/contents/ShowRestaurants';
 import SignupRest from './components/contents/SignupRest';
-
+import ShowSellerItems from './components/contents/showSellerItems'
 
 class App extends Component {
 
@@ -86,9 +86,10 @@ class App extends Component {
             <Route exact path='/ShowRest' render={() =>
               <div><ShowRest userInSession={this.state.loggedInUser} />
               </div>} />
-              <Route exact path='/showSellerItems' render={() =>
-              <div><showSellerItems userInSession={this.state.loggedInUser} />
-              </div>} />
+              <Route path='/profile/:id' render={( {match, location, history}) =>
+              <div>
+              <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} /></div>
+              } />
             <Footer />
           </div>
         </div>

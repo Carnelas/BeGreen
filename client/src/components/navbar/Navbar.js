@@ -23,51 +23,29 @@ class Navbar extends Component {
     if (this.state.loggedInUser) {
       return (
         <div>
-        <nav className="navbar" role="navigation" aria-label="main navigation">
-          <div className="navbar-brand">
-            <a class="navbar-item" href="#">
-              <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28" alt="logo"></img>
-            </a>
-          </div>
-
-          <div className="navbar-menu">
-            <div className="navbar-start">
-              <a className="navbar-item">
-                <Link to='/'>Home-r</Link>
+          <nav className="navbar" role="navigation" aria-label="main navigation">
+            <div className="navbar-brand">
+              <a className="navbar-item" href="#">
+                <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28" alt="logo"></img>
               </a>
-
-              <a className="navbar-item">
-                <Link to='/Seller'>Perfil vendedor</Link>
-              </a>
-
-              <a className="navbar-item">
-                <Link to='/SaleItems'>Productos a la venta</Link>
-              </a>
-
-              <a className="navbar-item">
-              <Link to='/ShowUsers'>Usuarios a la venta</Link>
-              </a>
-
-              <a className="navbar-item">
-              <Link to='/ShowRest'>Indice rests</Link>
-              </a>
-
-              <a className="navbar-item">
-              <Link to='/Signuprest'>Registra rests</Link>
-              </a>
-
             </div>
-            <div class="navbar-end">
-              <div class="navbar-item">
-                <div class="buttons">
-                  <a class="button is-light">
-                    <button onClick={this.handleLogout}>Logout</button>
-                  </a>
+            <div className="navbar-menu">
+              <div className="navbar-start">
+                <Link to='/' className="navbar-item">Home-r</Link>
+                <Link to='/Seller' className="navbar-item">Perfil vendedor</Link>
+                <Link to='/ShowUsers' className="navbar-item">Usuarios a la venta</Link>
+                <Link to='/ShowRest' className="navbar-item">Indice rests</Link>
+                <Link to='/Signuprest' className="navbar-item">Registra rests</Link>
+              </div>
+              <div className="navbar-end">
+                <div className="navbar-item">
+                  <div className="buttons">
+                    <button className="button is-rounded is-hovered is-inverted" onClick={this.handleLogout}>Logout</button>
+                  </div>
                 </div>
               </div>
             </div>
-          </div>
-        </nav>
+          </nav>
         </div>
       )
     } else {
@@ -75,30 +53,24 @@ class Navbar extends Component {
 
         <nav className="navbar" role="navigation" aria-label="main navigation">
           <div className="navbar-brand">
-            <a class="navbar-item" href="#">
+            <a className="navbar-item" href="#">
               <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" width="112" height="28" alt="logo"></img>
             </a>
           </div>
 
           <div className="navbar-menu">
             <div className="navbar-start">
-              <a className="navbar-item">
-                <Link to='/'>Home-r</Link>
-              </a>
-              <div class="navbar-item has-dropdown is-hoverable">
-                <a class="navbar-link">
-                  More
+              <Link to='/' className="navbar-item">Home</Link >
+              <div className="navbar-item has-dropdown is-hoverable">
+                <a className="navbar-link">
+                  Registrate o haz login
                 </a>
-                <div class="navbar-dropdown">
-                  <a class="navbar-item">
-                    <Link to='/Signup'>Signup</Link>
+                <div className="navbar-item navbar-dropdown is-hoverable">
+                  <Link to='/Signup' className="navbar-item">Registrate</Link>
+                  <Link to='/Login' className="navbar-item">Entra en tu sesión</Link>
+                  <a className="navbar-item">
+                    Contacto
                   </a>
-                  <a class="navbar-item">
-                    <Link to='/Login'>Login</Link>
-                  </a>
-                  <a class="navbar-item">
-                    Contact
-          </a>
                 </div>
               </div>
             </div>
@@ -111,57 +83,3 @@ class Navbar extends Component {
 }
 
 export default Navbar;
-
-/* 
-<div className="hero-head">
-            <nav className="navbar">
-              <div className="container">
-                <div className="navbar-brand">
-                  <a className="navbar-item" href="../">
-                    <img src="http://www.cocoua.es/iamgenes/es.AppTardStudios.crazy_homer.png" alt="Logo" width="112" height="28"/>
-                  </a>
-                  <span className="navbar-burger burger" data-target="navbarMenu">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                  </span>
-                </div>
-                <div id="navbarMenu" className="navbar-menu">
-                  <div className="navbar-end">
-                    <span className="navbar-item">
-                      <a className="button is-white is-outlined" href="#">
-                        <span className="icon">
-                          <i className="fa fa-home"/>
-                        </span>
-                        <Link to='/'>Home</Link>
-                      </a>
-                    </span>
-                    <span className="navbar-item">
-                      <a className="button is-white is-outlined" href="#">
-                        <span className="icon">
-                          <i className="fa fa-superpowers"></i>
-                        </span>
-                        <span>Examples</span>
-                      </a>
-                    </span>
-                    <span className="navbar-item">
-                      <a className="button is-white is-outlined" href="#">
-                        <span className="icon">
-                          <i className="fa fa-book"></i>
-                        </span>
-                        <span>Documentation</span>
-                      </a>
-                    </span>
-                    <span className="navbar-item">
-                      <a className="button is-white is-outlined" href="https://github.com/dansup/bulma-templates/blob/master/templates/landing.html">
-                        <span className="icon">
-                          <i className="fa fa-github"></i>
-                        </span>
-                        <span>View Source</span>
-                      </a>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </nav>
-          </div> */

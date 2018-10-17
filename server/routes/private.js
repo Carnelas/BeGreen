@@ -24,8 +24,9 @@ router.get('/item', (req, res, next) => {
         .catch(e => next(e))
 })
 
-router.get('/item/sellerId', (req, res, next) => {
+router.get('/item/:sellerId', (req, res, next) => {
     Item.find({ sellerId: req.params.sellerId })
+    .populate("sellerId", "username")
         .then(data => res.status(200).json(data))
         .catch(e => next(e))
 })

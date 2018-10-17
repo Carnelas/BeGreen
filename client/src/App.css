@@ -27,16 +27,21 @@ body {
 
 .navbar {
   width: 100%;
-  background-color: rgba(0, 0, 0, 0)
+  background-color: rgba(0, 0, 0, 0);
+  position: fixed;
+}
+
+.navbar a {
+    color: white;
+    cursor: pointer;
+}
+
+.navbar-dropdown a{
+  color: black;
 }
 
 .App-link {
   color: #61dafb;
-}
-
-a {
-  color: white;
-  cursor: pointer;
 }
 
 fieldset {
@@ -51,4 +56,24 @@ fieldset {
     color: black;
     text-align: center;
 }
+p {
+  color: #fabada;
+}
 
+h1 {
+  color: white;
+
+}
+
+h2 {
+  color: white;
+
+}
+
+h3{
+  color: white;
+}
+
+label {
+  color: white;
+}

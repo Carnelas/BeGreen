@@ -42,6 +42,8 @@ class SignupRest extends Component {
                 <h3>¡Bienvenido! Publica tu restaurante aquí:</h3>
 
                 <form onSubmit={this.handleFormSubmit}>
+
+
                     <fieldset>
                         <label>Nombre de tu restaurante:</label>
                         <input type="text" name="name" value={this.state.name} onChange={e => this.handleChange(e)} />
@@ -52,21 +54,20 @@ class SignupRest extends Component {
                         <input type="number" name="phone" value={this.state.phone} onChange={e => this.handleChange(e)} />
                     </fieldset>
 
-                       <fieldset>
+                    <fieldset>
                         <label>Descripción:</label>
                         <input type="text" name="description" value={this.state.description} onChange={e => this.handleChange(e)} />
                     </fieldset>
 
                     <fieldset>
                         <label>¿Cuál es tu dirección?</label>
-                            <input type="text" name="adress" value={this.state.adress} onChange={e => this.handleChange(e)} />
+                        <input type="text" name="adress" value={this.state.adress} onChange={e => this.handleChange(e)} />
                     </fieldset>
 
                     <fieldset>
                         <label>Nombre del propietario:</label>
-                            <input type="text" name="owner" value={this.state.owner} onChange={e => this.handleChange(e)} />
+                        <input type="text" name="owner" value={this.state.owner} onChange={e => this.handleChange(e)} />
                     </fieldset>
-
 
                     <input type="submit" value="Sign up" />
                 </form>
@@ -77,3 +78,7 @@ class SignupRest extends Component {
 }
 
 export default SignupRest;
+
+
+
+{/*  */ }

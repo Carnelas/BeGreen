@@ -15,7 +15,7 @@ class AddItems extends Component {
   handleFormSubmit = (event) => {
     event.preventDefault();
     const itemName = this.state.itemName;
-    const {id, username} = JSON.parse(this.state.user);
+    const { id, username } = JSON.parse(this.state.user);
     const price = this.state.price;
     const qty = this.state.qty;
     console.log(id, username)
@@ -54,49 +54,51 @@ class AddItems extends Component {
         <h3>¿Qué quieres poner a la venta?</h3>
 
         <form onSubmit={this.handleFormSubmit}>
-          <div class="field">
-            <div class="control">
-              <fieldset>
-                <input class="input" placeholder="Artículo" type="text" name="itemName" value={this.state.itemName} onChange={e => this.handleChange(e)} />
-              </fieldset>
+          <div className="column is-6 is-offset-3">
+            <div className="field is-grouped is-grouped-centered">
+              <div className="control">
+                <fieldset>
+                  <input className="input" placeholder="Artículo" type="text" name="itemName" value={this.state.itemName} onChange={e => this.handleChange(e)} />
+                </fieldset>
+              </div>
             </div>
-          </div>
-          <div class="select">
-            <div class="control">
-              <fieldset>
-                <select name="user" onChange={e => this.handleChange(e) } >
-                  {
-                    this.state.users ? this.state.users.map((user) => {
-                    return (
-                      <option value={JSON.stringify({id:user._id,  username:user.username})}>
-                        {user.username}
-                      </option>
-                    )
-                  }) : ""
-                  }
-                </select>
-              </fieldset>
+            <div className="select">
+              <div className="control">
+                <fieldset>
+                  <select name="user" onChange={e => this.handleChange(e)} >
+                    {
+                      this.state.users ? this.state.users.map((user) => {
+                        return (
+                          <option value={JSON.stringify({ id: user._id, username: user.username })}>
+                            {user.username}
+                          </option>
+                        )
+                      }) : ""
+                    }
+                  </select>
+                </fieldset>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <fieldset>
-                <input class="input" placeholder="Precio" type="number" name="price" value={this.state.price} onChange={e => this.handleChange(e)} />
-              </fieldset>
+            <div className="field">
+              <div className="control">
+                <fieldset>
+                  <input className="input" placeholder="Precio" type="number" name="price" value={this.state.price} onChange={e => this.handleChange(e)} />
+                </fieldset>
+              </div>
             </div>
-          </div>
 
-          <div class="field">
-            <div class="control">
-              <fieldset>
-                <input class="input" placeholder="Cantidad" type="number" name="qty" value={this.state.qty} onChange={e => this.handleChange(e)} />
-              </fieldset>
+            <div className="field">
+              <div className="control">
+                <fieldset>
+                  <input className="input" placeholder="Cantidad" type="number" name="qty" value={this.state.qty} onChange={e => this.handleChange(e)} />
+                </fieldset>
+              </div>
             </div>
-          </div>
-          <input type="submit" value="AddItems" />
+            <input type="submit" value="AddItems" />
+          </div >
         </form>
-      </div >
+      </div>
     )
   }
 }

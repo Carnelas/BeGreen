@@ -16,13 +16,12 @@ class Contents extends Component {
                 <h2 className="subtitle">
                   Quote aleatoria y muy ecológica
                         </h2>
-                <div className="box">
-                  <div className="field is-grouped is-grouped-centered">
-                    <p className="control">
-                      <a className="button">
-                        Entra aquí para ver los productos</a>
-                    </p>
-                  </div>
+                <div className="field is-grouped is-grouped-centered">
+                  <p className="control">
+                    <a className="button is-rounded is-focused is-hovered is-light">
+                      <Link to='/SaleItems'>Productos a la venta</Link>
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>

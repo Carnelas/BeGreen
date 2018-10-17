@@ -19,8 +19,9 @@ class Items {
       })
   }
 
-  showSellerItems = () => {
-    return this.service.get('/item/sellerId')
+  showSellerItems = (id) => {
+    console.log(id);
+    return this.service.get(`/item/${id}`)
       .then(response => {
         return response.data
       })
