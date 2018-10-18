@@ -23,7 +23,7 @@ class ShowUsers extends Component {
         if (this.state.users)
             return (
                 <div className="ShowUsers">
-                    <p>Esto mostrará los usuarios a la venta: </p>
+                    <p>Esto mostrará los vendedores: </p>
                     {this.state.users.map((user, index) => {
                         return (
                             <div key={index}>

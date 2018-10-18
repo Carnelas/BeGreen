@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import Items from './Items';
 
 
@@ -20,16 +21,38 @@ class SaleItems extends Component {
     if (this.state.items)
       return (
         <div className="ShowUsers">
-          <p>Esto mostrará los artículos a la venta: </p>
-          <div >{this.state.items.map(item => {
-            return (
-              <div>
-                <div key={item.itemName}>
+          <p>Artículos a la venta: </p>
+          <div className="columns">
+                <div className="column">
+                  <p>Artículo</p>
                 </div>
-                <div>
-                  <p>{item.itemName}</p>
+                <div className="column">
+                  <p>Precio</p>
+                </div>
+                <div className="column">
+                  <p>Vendedor</p>
+                </div>
+                <div className="column">
+                  <p>Cantidad disponible</p>
                 </div>
               </div>
+          <div >{this.state.items.map(item => {
+            return (
+              <div className="columns">
+                <div className="column">
+                  <p>{item.itemName}</p>
+                </div>
+                <div className="column">
+                  <p>{item.price}</p>
+                </div>
+                <div className="column">
+                <Link to={'/profile/'+ item.sellerId}>{item.sellerName}</Link>
+                </div>
+                <div className="column">
+                  <p>{item.qty}</p>
+                </div>
+              </div>
+
             )
           })}
 
