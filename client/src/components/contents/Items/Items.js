@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 
 class Items {
@@ -20,7 +19,6 @@ class Items {
   }
 
   showSellerItems = (id) => {
-    console.log(id);
     return this.service.get(`/item/${id}`)
       .then(response => {
         return response.data

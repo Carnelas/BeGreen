@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Items from './Items';
 
-
 class SaleItems extends Component {
   constructor(props) {
     super(props);
@@ -15,7 +14,6 @@ class SaleItems extends Component {
         this.setState({ items: [...res] })
       })
   }
-
 
   render() {
     if (this.state.items)

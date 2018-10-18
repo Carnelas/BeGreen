@@ -16,9 +16,9 @@ class showRestaurants extends Component {
             .then(res => {
                 const restaurants = res;
                 this.setState({ restaurants })
-            })
+            }
+            )
     }
-
 
     render() {
         if (this.state.restaurants)
@@ -29,13 +29,11 @@ class showRestaurants extends Component {
                         return (
                             <div key={index}>
                                 <div>
-                                <Link to={'/restaurant/' + restaurant._id}>{restaurant.name}</Link>
+                                    <Link to={'/restaurant/' + restaurant._id}>{restaurant.name}</Link>
                                 </div>
                             </div>
                         )
                     })}
-
-                    
                 </div>)
         else
             return (<div></div>)

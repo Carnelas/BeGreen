@@ -1,4 +1,3 @@
-// auth/Signup.js
 import React, { Component } from 'react';
 import AuthService from './AuthService'
 
@@ -48,19 +47,19 @@ class Login extends Component {
             <div className="field is-grouped is-grouped-centered">
               <div className="control">
                 <fieldset>
-                  <input type="text" placeholder= "nombre" name="username" value={this.state.username} onChange={e => this.handleChange(e)}/>
+                  <input type="text" placeholder="nombre" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
                 </fieldset>
               </div>
             </div>
             <div className="field is-grouped is-grouped-centered">
               <div className="control">
                 <fieldset>
-                  <input type="password" placeholder= "contraseña" name="password" value={this.state.password} onChange={e => this.handleChange(e)}/>
+                  <input type="password" placeholder="contraseña" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
                 </fieldset>
               </div>
             </div>
-           </div>
-           <input type="submit" value="Login" className="button is-rounded is-focused is-hovered is-light" />
+          </div>
+          <input type="submit" value="Login" className="button is-rounded is-focused is-hovered is-light" />
 
         </form>
       </div>

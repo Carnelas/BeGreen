@@ -18,7 +18,6 @@ class AddItems extends Component {
     const { id, username } = JSON.parse(this.state.user);
     const price = this.state.price;
     const qty = this.state.qty;
-    console.log(id, username)
     this.service.item(itemName, id, username, price, qty)
       .then(response => {
         this.setState({
@@ -38,7 +37,6 @@ class AddItems extends Component {
     this.setState({ [name]: value });
   }
 
-  //revisar esto 
   componentDidMount() {
     this.seller.showUsers()
       .then(res => {
@@ -46,7 +44,6 @@ class AddItems extends Component {
         this.setState({ users })
       })
   }
-
 
   render() {
     return (

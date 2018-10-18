@@ -15,8 +15,7 @@ class SaleItems extends Component {
         this.setState({ items: [...res] })
       })
   }
-
-
+// REVISAR
   render() {
     if (this.state.items)
       return (

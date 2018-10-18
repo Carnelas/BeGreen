@@ -13,10 +13,10 @@ class showSellerItems extends Component {
 
     componentWillReceiveProps(nextProps) {
         this.setState({ ...this.state, loggedInUser: nextProps["userInSession"] })
-      }
+    }
 
     componentDidMount() {
-        
+
         this.service.showSellerItems(this.props.params.id)
             .then(res => {
                 const items = res;
@@ -24,16 +24,11 @@ class showSellerItems extends Component {
             })
     }
 
-
     render() {
-        console.log(this.props.params)
-        
         if (this.state.items)
             return (
                 <div>
-                    {/* <p>Artículos que {this.state.loggedInUser.username} tiene a la venta: </p> */}
                     {this.state.items.map((item, index) => {
-                        console.log(item)
                         return (
                             <div key={index}>
                                 <div>
@@ -42,12 +37,10 @@ class showSellerItems extends Component {
                             </div>
                         )
                     })}
-
-                    
                 </div>)
         else
             return (<div>
-                <p>HOLA</p>
+                ""
             </div>)
     }
 }

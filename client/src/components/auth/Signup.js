@@ -1,4 +1,3 @@
-// auth/Signup.js
 import React, { Component } from 'react';
 import AuthService from './AuthService'
 
@@ -33,7 +32,6 @@ class Signup extends Component {
     const { name, value } = event.target;
     this.setState({ [name]: value });
   }
-
 
   render() {
     return (
@@ -74,7 +72,7 @@ class Signup extends Component {
               </fieldset>
             </div>
           </div>
-          <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light"/>
+          <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light" />
         </form>
       </div>
     )

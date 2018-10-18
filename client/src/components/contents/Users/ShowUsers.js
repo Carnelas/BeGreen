@@ -18,7 +18,6 @@ class ShowUsers extends Component {
             })
     }
 
-
     render() {
         if (this.state.users)
             return (
@@ -33,8 +32,6 @@ class ShowUsers extends Component {
                             </div>
                         )
                     })}
-
-
                 </div>)
         else
             return (<div></div>)

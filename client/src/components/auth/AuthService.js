@@ -1,4 +1,3 @@
-// auth/auth-service.js
 import axios from 'axios';
 
 class AuthService {
@@ -10,23 +9,23 @@ class AuthService {
   }
 
   signup = (username, password, email, role) => {
-    return this.service.post('/signup', {username, password, email, role})
-    .then(response => response.data)
+    return this.service.post('/signup', { username, password, email, role })
+      .then(response => response.data)
   }
 
   login = (username, password) => {
-    return this.service.post('/login', {username, password})
-    .then(response => response.data)
+    return this.service.post('/login', { username, password })
+      .then(response => response.data)
   }
 
   loggedin = () => {
-    return this.service.get('/currentUser',)
-    .then(response => response.data)
+    return this.service.get('/currentUser')
+      .then(response => response.data)
   }
 
   logout = () => {
-    return this.service.get('/logout',)
-    .then(response => response.data)
+    return this.service.get('/logout')
+      .then(response => response.data)
   }
 }
 

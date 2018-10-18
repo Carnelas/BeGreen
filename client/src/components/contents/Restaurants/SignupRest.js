@@ -35,7 +35,6 @@ class SignupRest extends Component {
         this.setState({ [name]: value });
     }
 
-
     render() {
         return (
             <div className="signup">
@@ -81,18 +80,18 @@ class SignupRest extends Component {
                                 </fieldset>
                             </div>
                         </div>
-                        </div>
+                    </div>
 
-                        <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light" />
+                    <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light" />
                 </form>
 
             </div>
-                )
-            }
-        }
+        )
+    }
+}
 
-        export default SignupRest;
+export default SignupRest;
 
 
 
-{/*  */}
+{/*  */ }

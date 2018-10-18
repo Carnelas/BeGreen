@@ -19,8 +19,7 @@ class Home extends Component {
                   <div className="field is-grouped is-grouped-centered">
                     <p className="control">
                       
-                        <Link to='/items' className="button is-rounded is-focused is-hovered is-light">Productos a la venta</Link>
-                      
+                        <Link to='/items' className="button is-rounded is-focused is-hovered is-light">Productos a la venta</Link> 
                     </p>
                   </div>
                 </div>
@@ -29,7 +28,6 @@ class Home extends Component {
           </section>
         </div>
       </body>)
-
   }
 }
 
