@@ -12,7 +12,7 @@ class AddItems extends Component {
     this.seller = new User();
   }
 
-  handleFormSubmit = (event) => {
+   handleFormSubmit = (event) => {
     event.preventDefault();
     const itemName = this.state.itemName;
     const { id, username } = JSON.parse(this.state.user);
@@ -30,7 +30,7 @@ class AddItems extends Component {
         this.props.getItem(response.item)
       })
       .catch(error => console.log(error))
-  }
+  } 
 
   handleChange = (event) => {
     const { name, value } = event.target;
