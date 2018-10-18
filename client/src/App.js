@@ -7,13 +7,13 @@ import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
 import Home from './components/contents/Home';
-import AddItems from './components/contents/AddItems';
-import SaleItems from './components/contents/SaleItems';
+import AddItems from './components/contents/Items/AddItems';
+import SaleItems from './components/contents/Items/SaleItems';
 import Footer from './components/footer/Footer';
-import ShowUsers from './components/contents/ShowUsers';
-import ShowRest from './components/contents/ShowRestaurants';
-import SignupRest from './components/contents/SignupRest';
-import ShowSellerItems from './components/contents/showSellerItems';
+import ShowUsers from './components/contents/Users/ShowUsers';
+import ShowRest from './components/contents/Restaurants/ShowRestaurants';
+import SignupRest from './components/contents/Restaurants/SignupRest';
+import ShowSellerItems from './components/contents/Users/showSellerItems';
 
 class App extends Component {
 

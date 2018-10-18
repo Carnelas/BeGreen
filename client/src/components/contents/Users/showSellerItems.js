@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import AuthService from '../auth/AuthService';
-import Item from './Items'
+import AuthService from '../../auth/AuthService';
+import Item from '../Items/Items'
 
 
 class showSellerItems extends Component {
