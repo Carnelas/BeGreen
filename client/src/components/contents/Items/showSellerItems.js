@@ -16,7 +16,6 @@ class showSellerItems extends Component {
     }
 
     componentDidMount() {
-
         this.service.showSellerItems(this.props.params.id)
             .then(res => {
                 const items = res;

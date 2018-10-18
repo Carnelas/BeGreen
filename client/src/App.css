@@ -41,12 +41,19 @@ body {
   margin-top: 35vh;
 }
 
+
 .login {
   margin-top: 35vh;
 }
 
 .AddItems{
   margin-top: 25vh;
+}
+
+.restprofile {
+  margin-top: 25vh;
+  font-size: 3vh;
+  color: #fabada;
 }
 
 .ShowUsers{
@@ -61,6 +68,9 @@ body {
   color: #fabada;
 }
 
+.App-link {
+  color: #fabada;
+}
 .navbar a {
     color: white;
     cursor: pointer;
@@ -70,9 +80,6 @@ body {
   color: black;
 }
 
-.App-link {
-  color: #fabada;
-}
 
 fieldset {
   border: 0;

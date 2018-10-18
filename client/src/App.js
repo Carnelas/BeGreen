@@ -14,6 +14,9 @@ import ShowUsers from './components/contents/ShowUsers';
 import ShowRest from './components/contents/Restaurants/ShowRestaurants';
 import SignupRest from './components/contents/Restaurants/SignupRest';
 import ShowSellerItems from './components/contents/Items/showSellerItems';
+import ShowRestaurants from './components/contents/Restaurants/ShowRestaurants';
+import ShowRestaurantsId from './components/contents/Restaurants/ShowRestaurantsId';
+
 
 class App extends Component {
 
@@ -70,17 +73,15 @@ class App extends Component {
               <SaleItems userInSession={this.state.loggedInUser} />} />
             <Route exact path='/sellers' render={() =>
               <ShowUsers userInSession={this.state.loggedInUser} />} />
+            <Route path='/profile/:id' render={({ match, location, history }) =>
+              <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} />} />
             <Route exact path='/restsignup' render={() =>
               <SignupRest userInSession={this.state.loggedInUser} />} />
             <Route exact path='/restaurants' render={() =>
-              <ShowRest userInSession={this.state.loggedInUser} />} />
-            <Route path='/profile/:id' render={({ match, location, history }) =>
-              <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} />} />
+              <ShowRestaurants userInSession={this.state.loggedInUser} />} />
 
-            {/*            trabajando con esto
- */}
-            <Route path='/restaurantsprofile/:id' render={({ match, location, history }) =>
-              <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} />
+            <Route path='/restaurants/:id' render={({ match, location, history }) =>
+              <ShowRestaurantsId params={match.params} userInSession={this.state.loggedInUser} />
             } />
             <Footer />
           </div>

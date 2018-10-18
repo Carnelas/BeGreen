@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 
 
 
-class showRestaurants extends Component {
+class ShowRestaurants extends Component {
     constructor(props) {
         super(props);
         this.state = {}
@@ -16,8 +16,7 @@ class showRestaurants extends Component {
             .then(res => {
                 const restaurants = res;
                 this.setState({ restaurants })
-            }
-            )
+            })
     }
 
     render() {
@@ -29,7 +28,7 @@ class showRestaurants extends Component {
                         return (
                             <div key={index}>
                                 <div>
-                                    <Link to={'/restaurant/' + restaurant._id}>{restaurant.name}</Link>
+                                    <Link to={'/restaurants/' + restaurant._id}>{restaurant.name}</Link>
                                 </div>
                             </div>
                         )
@@ -40,4 +39,4 @@ class showRestaurants extends Component {
     }
 }
 
-export default showRestaurants;
+export default ShowRestaurants;

@@ -18,12 +18,15 @@ class Restaurant {
             return response.data
           })
       }
-      showRestaurantById = () => {
-        return this.service.get('/restaurant/:_id')
+      
+      showRestaurantById = (id) => {
+        return this.service.get(`/restaurant/${id}`)
           .then(response => {
             return response.data
           })
       } 
 }
+
+
 
 export default Restaurant;

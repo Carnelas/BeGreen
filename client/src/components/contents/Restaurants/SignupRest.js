@@ -71,8 +71,6 @@ class SignupRest extends Component {
                                 </fieldset>
                             </div>
                         </div>
-
-
                         <div className="field is-grouped is-grouped-centered">
                             <div className="control">
                                 <fieldset>
