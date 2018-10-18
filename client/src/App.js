@@ -9,7 +9,7 @@ import AuthService from './components/auth/AuthService';
 import Home from './components/contents/Home';
 import AddItems from './components/contents/Items/AddItems';
 import SaleItems from './components/contents/Items/SaleItems';
-import Footer from './components/footer/Footer';
+import Footer from './components/footer/Footer'
 import ShowUsers from './components/contents/ShowUsers';
 import ShowRest from './components/contents/Restaurants/ShowRestaurants';
 import SignupRest from './components/contents/Restaurants/SignupRest';
