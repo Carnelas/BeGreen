@@ -55,6 +55,10 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('view engine', 'hbs');
+app.use(express.static(path.join(__dirname, 'public')));
+
 app.use(session({
   secret: 'passport secret shh',
   resave: true,
@@ -78,4 +82,8 @@ app.use('/api/user', require('./models/User'));
 app.use('/api/order', require('./models/Order'));
 app.use('/api/restaurant', require('./models/Restaurant'));
 
+app.use((req, res, next) => {
+  // If no routes match, send them the React HTML.
+   res.sendFile(__dirname + "/public/index.html");
+  });
 module.exports = app;
