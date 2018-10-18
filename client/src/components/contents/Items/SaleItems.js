@@ -20,7 +20,7 @@ class SaleItems extends Component {
   render() {
     if (this.state.items)
       return (
-        <div className="ShowUsers">
+        <div className="ShowUsers column is-6 is-offset-3">
           <p>Artículos a la venta: </p>
           <div className="columns">
                 <div className="column">

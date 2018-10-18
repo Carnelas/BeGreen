@@ -22,13 +22,24 @@ class ShowRestaurants extends Component {
     render() {
         if (this.state.restaurants)
             return (
-                <div className="ShowRestaurants">
-                    <p>Restaurantes que usan productos BeGreen: </p>
+                <div className="ShowRestaurants column is-6 is-offset-3">
+                      <h2>Restaurantes Green:</h2>
+                    <div className="columns">
+                        <div className="column">
+                            <p>Restaurantes</p>
+                        </div>
+                        <div className="sub column">
+                            <p>Descripción</p>
+                        </div>
+                    </div>
                     {this.state.restaurants.map((restaurant, index) => {
                         return (
-                            <div key={index}>
-                                <div>
+                            <div key={index} className="columns">
+                                <div className="column">
                                     <Link to={'/restaurants/' + restaurant._id}>{restaurant.name}</Link>
+                                </div>
+                                <div className="column">
+                                    <p>{restaurant.description}</p>
                                 </div>
                             </div>
                         )

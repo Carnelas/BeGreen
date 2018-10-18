@@ -23,11 +23,12 @@ class ShowRestaurantsId extends Component {
     render() {
         if (this.state.restaurant)
             return (
-                <div className="restprofile">
+                <div className="restprofile column is-6 is-offset-3">
                     <div>
                         {this.state.restaurant.name}
                     </div>
-                </div>)
+                </div>
+            )
         else
             return (<div>
                 ""

@@ -26,12 +26,31 @@ class showSellerItems extends Component {
     render() {
         if (this.state.items)
             return (
-                <div className="items">
+                <div className="items column is-6 is-offset-3">
+                    <h2>Artículos a la venta de este vendedor:</h2>
+                    <div className="columns">
+                        <div className="column">
+                            <p>Artículo</p>
+                        </div>
+                        <div className="column">
+                            <p>Precio</p>
+                        </div>
+                        <div className="column">
+                            <p>Vendedor</p>
+                        </div>
+
+                    </div>
                     {this.state.items.map((item, index) => {
                         return (
-                            <div key={index}>
-                                <div>
+                            <div key={index} className="columns">
+                                <div className="column">
                                     {item.itemName}
+                                </div>
+                                <div className="column">
+                                    {item.price}
+                                </div>
+                                <div className="column">
+                                    {item.qty}
                                 </div>
                             </div>
                         )

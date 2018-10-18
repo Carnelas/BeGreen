@@ -45,29 +45,23 @@ class Signup extends Component {
               </div>
             </div>
             <div className="field is-grouped is-grouped-centered">
-              <div className="control">
-                
+              <div className="control"> 
                   <input className="input" type="password" placeholder="Contraseña" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
-                
               </div>
             </div>
             <div className="field is-grouped is-grouped-centered">
               <div className="control">
-                
-                  <input className="input" type="phone" placeholder="Teléfono" name="phone" value={this.state.phone} onChange={e => this.handleChange(e)} />
-                
+                  <input className="input" type="text" placeholder="Teléfono" name="phone" value={this.state.phone} onChange={e => this.handleChange(e)} />
               </div>
             </div>
           </div>
           <div className="field is-grouped is-grouped-centered">
             <div className="control">
-              
                 <label>¿Eres comprador o vendedor? </label>
                 <select name="role" className="select is-rounded" value={this.state.role} onChange={e => this.handleChange(e)}>
                   <option value="buyer">Comprador</option>
                   <option value="seller">Vendedor</option>
                 </select>
-              
             </div>
           </div>
           <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light" />

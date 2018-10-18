@@ -47,7 +47,7 @@ class AddItems extends Component {
 
   render() {
     return (
-      <div className="AddItems">
+      <div className="AddItems column is-6 is-offset-3">
         <h3>¿Qué quieres poner a la venta?</h3>
         <form onSubmit={this.handleFormSubmit}>
           <div className="column is-6 is-offset-3">
