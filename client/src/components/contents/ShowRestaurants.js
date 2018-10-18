@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import Restaurant from './Restaurant';
+import { Link } from 'react-router-dom';
+
 
 
 class showRestaurants extends Component {
@@ -21,13 +23,13 @@ class showRestaurants extends Component {
     render() {
         if (this.state.restaurants)
             return (
-                <div>
+                <div className="ShowRestaurants">
                     <p>Restaurantes que usan productos BeGreen: </p>
                     {this.state.restaurants.map((restaurant, index) => {
                         return (
                             <div key={index}>
                                 <div>
-                                    <p>{restaurant.name}</p>
+                                <Link to={'/restaurant/' + restaurant._id}>{restaurant.name}</Link>
                                 </div>
                             </div>
                         )

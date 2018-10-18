@@ -38,47 +38,61 @@ class SignupRest extends Component {
 
     render() {
         return (
-            <div>
-                <h3>¡Bienvenido! Publica tu restaurante aquí:</h3>
-
+            <div className="signup">
+                <h3>Introduce los datos de tu restaurante aquí:</h3>
                 <form onSubmit={this.handleFormSubmit}>
+                    <div className="column is-6 is-offset-3">
+                        <div className="field is-grouped is-grouped-centered">
+                            <div className="control">
+                                <fieldset>
+                                    <input type="text" placeholder="Nombre de tu restaurante" name="name" value={this.state.name} onChange={e => this.handleChange(e)} />
+                                </fieldset>
+                            </div>
+                        </div>
+                        <div className="field is-grouped is-grouped-centered">
+                            <div className="control">
+                                <fieldset>
+                                    <input type="number" placeholder="Teléfono" name="phone" value={this.state.phone} onChange={e => this.handleChange(e)} />
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div className="field is-grouped is-grouped-centered">
+                            <div className="control">
+                                <fieldset>
+                                    <input type="text" name="description" placeholder="Descripción" value={this.state.description} onChange={e => this.handleChange(e)} />
+                                </fieldset>
+                            </div>
+                        </div>
+
+                        <div className="field is-grouped is-grouped-centered">
+                            <div className="control">
+                                <fieldset>
+                                    <input type="text" name="adress" placeholder="Dirección" value={this.state.adress} onChange={e => this.handleChange(e)} />
+                                </fieldset>
+                            </div>
+                        </div>
 
 
-                    <fieldset>
-                        <label>Nombre de tu restaurante:</label>
-                        <input type="text" name="name" value={this.state.name} onChange={e => this.handleChange(e)} />
-                    </fieldset>
+                        <div className="field is-grouped is-grouped-centered">
+                            <div className="control">
+                                <fieldset>
+                                    <input type="text" placeholder="Propietario" name="owner" value={this.state.owner} onChange={e => this.handleChange(e)} />
+                                </fieldset>
+                            </div>
+                        </div>
+                        </div>
 
-                    <fieldset>
-                        <label>Teléfono:</label>
-                        <input type="number" name="phone" value={this.state.phone} onChange={e => this.handleChange(e)} />
-                    </fieldset>
-
-                    <fieldset>
-                        <label>Descripción:</label>
-                        <input type="text" name="description" value={this.state.description} onChange={e => this.handleChange(e)} />
-                    </fieldset>
-
-                    <fieldset>
-                        <label>¿Cuál es tu dirección?</label>
-                        <input type="text" name="adress" value={this.state.adress} onChange={e => this.handleChange(e)} />
-                    </fieldset>
-
-                    <fieldset>
-                        <label>Nombre del propietario:</label>
-                        <input type="text" name="owner" value={this.state.owner} onChange={e => this.handleChange(e)} />
-                    </fieldset>
-
-                    <input type="submit" value="Sign up" />
+                        <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light" />
                 </form>
 
             </div>
-        )
-    }
-}
+                )
+            }
+        }
 
-export default SignupRest;
+        export default SignupRest;
 
 
 
-{/*  */ }
+{/*  */}

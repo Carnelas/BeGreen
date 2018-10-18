@@ -27,7 +27,7 @@ class ShowUsers extends Component {
                     {this.state.users.map((user, index) => {
                         return (
                             <div key={index}>
-                                <div>
+                                <div >
                                     <Link to={'/profile/' + user._id}>{user.username}</Link>
                                 </div>
                             </div>

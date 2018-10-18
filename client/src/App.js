@@ -6,7 +6,7 @@ import Navbar from './components/navbar/Navbar';
 import Signup from './components/auth/Signup';
 import Login from './components/auth/Login';
 import AuthService from './components/auth/AuthService';
-import Contents from './components/contents/Contents';
+import Home from './components/contents/Home';
 import AddItems from './components/contents/AddItems';
 import SaleItems from './components/contents/SaleItems';
 import Footer from './components/footer/Footer';
@@ -52,7 +52,7 @@ class App extends Component {
     }
   }
 
-  
+
 
 
   render() {
@@ -65,29 +65,24 @@ class App extends Component {
             <Navbar userInSession={this.state.loggedInUser} logout={this.logout} />
           </header>
           <div>
-            {/* home */}
             <Route exact path='/' render={() =>
-              <Contents></Contents>} />
-            {/* Perfil personal de cada vendedor */}
-            <Route exact path='/Seller' render={() =>
+              <Home />} />
+            <Route exact path='/addobjets' render={() =>
               <AddItems />} />
-            {/* Perfil de ventas de cada vendedor */}
-            <Route exact path='/SaleItems' render={() =>
-              <div><SaleItems userInSession={this.state.loggedInUser} />
-              </div>} />
-            <Route exact path='/ShowUsers' render={() =>
-              <div><ShowUsers userInSession={this.state.loggedInUser} />
-              </div>} />
-            <Route exact path='/SignupRest' render={() =>
-              <div><SignupRest userInSession={this.state.loggedInUser} />
-              </div>} />
-            <Route exact path='/ShowRest' render={() =>
-              <div><ShowRest userInSession={this.state.loggedInUser} />
-              </div>} />
-              <Route path='/profile/:id' render={( {match, location, history}) =>
-              <div>
-              <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} /></div>
-              } />
+            <Route exact path='/items' render={() =>
+              <SaleItems userInSession={this.state.loggedInUser} />} />
+            <Route exact path='/sellers' render={() =>
+              <ShowUsers userInSession={this.state.loggedInUser} />} />
+            <Route exact path='/restsignup' render={() =>
+              <SignupRest userInSession={this.state.loggedInUser} />} />
+            <Route exact path='/restaurants' render={() =>
+              <ShowRest userInSession={this.state.loggedInUser} />} />
+            <Route path='/profile/:id' render={({ match, location, history }) =>
+              <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} />} />
+            {/* Ruta que dirije al perfil de cada restaurante
+              <Route path='/restprofile/:id' render={( {match, location, history}) =>
+              <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} />
+              } /> */}
             <Footer />
           </div>
         </div>

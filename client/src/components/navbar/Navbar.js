@@ -31,11 +31,11 @@ class Navbar extends Component {
             </div>
             <div className="navbar-menu">
               <div className="navbar-start">
-                <Link to='/' className="navbar-item">Home-r</Link>
-                <Link to='/Seller' className="navbar-item">Perfil vendedor</Link>
-                <Link to='/ShowUsers' className="navbar-item">Usuarios a la venta</Link>
-                <Link to='/ShowRest' className="navbar-item">Indice rests</Link>
-                <Link to='/Signuprest' className="navbar-item">Registra rests</Link>
+                <Link to='/' className="navbar-item">Home</Link>
+                <Link to='/addobjets' className="navbar-item">Perfil vendedor</Link>
+                <Link to='/sellers' className="navbar-item">Vendedores</Link>
+                <Link to='/restaurants' className="navbar-item">Restaurantes</Link>
+                <Link to='/restsignup' className="navbar-item">Registro restaurantes</Link>
               </div>
               <div className="navbar-end">
                 <div className="navbar-item">

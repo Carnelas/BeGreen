@@ -49,6 +49,12 @@ body {
   color: #fabada;
 }
 
+.ShowRestaurants{
+  margin-top: 25vh;
+  font-size: 3vh;
+  color: #fabada;
+}
+
 .navbar a {
     color: white;
     cursor: pointer;
