@@ -15,25 +15,19 @@ class SaleItems extends Component {
         this.setState({ items: [...res] })
       })
   }
-// REVISAR
+  // REVISAR
   render() {
     if (this.state.items)
       return (
-        <div>
+        <div className="ShowUsers">
           <p>Esto mostrará los artículos a la venta: </p>
-          <div className="">{this.state.items.map(item => {
+          <div >{this.state.items.map(item => {
             return (
-              <div className="">
+              <div>
                 <div key={item.itemName}>
                 </div>
-                <div className="">
-                  <p>{item.sellerName}</p>
-                </div>
-                <div className="">
-                  <p>{item.price}</p>
-                </div>
-                <div className="">
-                  <p>{item.qty}</p>
+                <div>
+                  <p>{item.itemName}</p>
                 </div>
               </div>
             )
@@ -47,3 +41,17 @@ class SaleItems extends Component {
 }
 
 export default SaleItems;
+
+/* 
+
+  <div>
+                  <p>{item.sellerName}</p>
+                </div>
+<div className="">
+<p>{item.price}</p>
+</div>
+<div className="">
+<p>{item.qty}</p>
+</div>
+
+ */

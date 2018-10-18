@@ -46,16 +46,12 @@ class Login extends Component {
           <div className="column is-6 is-offset-3">
             <div className="field is-grouped is-grouped-centered">
               <div className="control">
-                <fieldset>
-                  <input type="text" placeholder="nombre" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
-                </fieldset>
+                <input className="input" type="text" placeholder="nombre" name="username" value={this.state.username} onChange={e => this.handleChange(e)} />
               </div>
             </div>
             <div className="field is-grouped is-grouped-centered">
               <div className="control">
-                <fieldset>
-                  <input type="password" placeholder="contraseña" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
-                </fieldset>
+                <input className="input" type="password" placeholder="contraseña" name="password" value={this.state.password} onChange={e => this.handleChange(e)} />
               </div>
             </div>
           </div>
