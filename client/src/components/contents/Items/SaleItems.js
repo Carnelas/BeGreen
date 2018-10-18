@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Items from './Items';
 
+
 class SaleItems extends Component {
   constructor(props) {
     super(props);
@@ -14,7 +15,7 @@ class SaleItems extends Component {
         this.setState({ items: [...res] })
       })
   }
-
+// REVISAR
   render() {
     if (this.state.items)
       return (

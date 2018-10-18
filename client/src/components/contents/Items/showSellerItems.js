@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import AuthService from '../../auth/AuthService';
-import Item from '../Items/Items'
+import Item from './Items'
 
 
 class showSellerItems extends Component {
@@ -27,12 +27,12 @@ class showSellerItems extends Component {
     render() {
         if (this.state.items)
             return (
-                <div>
+                <div className="items">
                     {this.state.items.map((item, index) => {
                         return (
                             <div key={index}>
                                 <div>
-                                    <p>{item.itemName}</p>
+                                    {item.itemName}
                                 </div>
                             </div>
                         )

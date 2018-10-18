@@ -10,10 +10,10 @@ import Home from './components/contents/Home';
 import AddItems from './components/contents/Items/AddItems';
 import SaleItems from './components/contents/Items/SaleItems';
 import Footer from './components/footer/Footer';
-import ShowUsers from './components/contents/Users/ShowUsers';
+import ShowUsers from './components/contents/ShowUsers';
 import ShowRest from './components/contents/Restaurants/ShowRestaurants';
 import SignupRest from './components/contents/Restaurants/SignupRest';
-import ShowSellerItems from './components/contents/Users/showSellerItems';
+import ShowSellerItems from './components/contents/Items/showSellerItems';
 
 class App extends Component {
 
@@ -52,9 +52,6 @@ class App extends Component {
     }
   }
 
-
-
-
   render() {
     this.fetchUser()
 
@@ -79,10 +76,12 @@ class App extends Component {
               <ShowRest userInSession={this.state.loggedInUser} />} />
             <Route path='/profile/:id' render={({ match, location, history }) =>
               <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} />} />
-            {/* Ruta que dirije al perfil de cada restaurante
-              <Route path='/restprofile/:id' render={( {match, location, history}) =>
+
+            {/*            trabajando con esto
+ */}
+            <Route path='/restaurantsprofile/:id' render={({ match, location, history }) =>
               <ShowSellerItems params={match.params} userInSession={this.state.loggedInUser} />
-              } /> */}
+            } />
             <Footer />
           </div>
         </div>

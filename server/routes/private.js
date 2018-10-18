@@ -55,7 +55,7 @@ router.post('/signupRest', (req, res, next) => {
 
     Restaurant.findOne({ name })
         .then(foundRestaurant => {
-            if (foundRestaurant) throw new Error('Restaurant already exists');
+            if (foundRestaurant) throw new Error('Restaurante ya registrado');
             return new Restaurant({
                 name,
                 phone,
@@ -68,7 +68,7 @@ router.post('/signupRest', (req, res, next) => {
         .catch(e => next(e));
 }); 
 
-//esto devolverá todos los restaurantes
+//esto devuelve todos los restaurantes
 router.get('/restaurant', (req, res, next) => {
     Restaurant.find({})
         .then(data => res.status(200).json(data))

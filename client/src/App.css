@@ -21,6 +21,12 @@ body {
   color: white;
 }
 
+.items {
+  margin-top: 25vh;
+  font-size: 4vh;
+  color: #fabada;
+}
+
 .subtitle {
   color: white;
 }
@@ -72,7 +78,7 @@ fieldset {
   border: 0;
 }
 
-.foter {
+.myfooter {
     position: fixed;
     left: 0;
     bottom: 0;

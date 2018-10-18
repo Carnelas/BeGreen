@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Items from './Items';
-import User from '../Users/User';
+import User from '../User';
 
 
 

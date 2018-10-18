@@ -5,7 +5,7 @@ class Footer extends Component {
 
     render() {
         return (
-            <div className="foter">
+            <div className="myfooter">
                 <a href="#" target='_blank' title='blog'><img src="http://jthink.net/images/blogger.png" alt="blog" title=" blog" className="btn btn-outline" /></a>
                 <a href="#" target="_blank" title="Facebook page"><img src="http://jthink.net/images/facebook.png" alt="Facebook page" title=" Facebook page" height="32" width="32" /></a>&nbsp;
         <a href="#" target="_blank" title="Google+ page"><img src="http://jthink.net/images/google_plus.png" alt="google_plus" title=" Google+ page" height="32" width="32" /></a>&nbsp;
