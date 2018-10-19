@@ -22,16 +22,13 @@ const login = (req, user) => {
 }
 
 
-// SIGNUP
 router.post('/signup', (req, res, next) => {
 
   const { username, password, phone, role } = req.body;
-  // Check for non empty user, password, phone or role
   if (!username || !password) {
     next(new Error('You must provide valid credentials'));
   }
 
-  // Check if user exists in DB
   User.findOne({ username })
     .then(foundUser => {
       if (foundUser) throw new Error('Username already exists');
@@ -46,8 +43,8 @@ router.post('/signup', (req, res, next) => {
         role
       }).save();
     })
-    .then(savedUser => login(req, savedUser)) // Login the user using passport
-    .then(user => res.json({ status: 'signup & login successfully', user })) // Answer JSON
+    .then(savedUser => login(req, savedUser)) 
+    .then(user => res.json({ status: 'signup & login successfully', user })) 
     .catch(e => next(e));
 });
 
@@ -55,11 +52,9 @@ router.post('/signup', (req, res, next) => {
 router.post('/login', (req, res, next) => {
   passport.authenticate('local', (err, theUser, failureDetails) => {
 
-    // Check for errors
     if (err) next(new Error('Something went wrong'));
     if (!theUser) next(failureDetails)
 
-    // Return user and logged in
     login(req, theUser).then(user => res.status(200).json(req.user));
 
   })(req, res, next);

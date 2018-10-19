@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
-import AuthService from './AuthService'
+import AuthService from './AuthService';
+import {Redirect} from 'react-router-dom';
 
 class Login extends Component {
   constructor(props) {
@@ -18,6 +19,7 @@ class Login extends Component {
         this.setState({
           username: username,
           password: password,
+          redirect: true,
           error: false
         });
 
@@ -38,7 +40,7 @@ class Login extends Component {
   }
 
   render() {
-
+    if(this.state.redirect) return <Redirect to='/'/>
     return (
       <div className="login">
         <h3>¡Hola! Bienvenido de nuevo</h3>
@@ -56,7 +58,6 @@ class Login extends Component {
             </div>
           </div>
           <input type="submit" value="Login" className="button is-rounded is-focused is-hovered is-light" />
-
         </form>
       </div>
     )

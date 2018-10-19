@@ -79,11 +79,10 @@ class App extends Component {
               <SignupRest userInSession={this.state.loggedInUser} />} />
             <Route exact path='/restaurants' render={() =>
               <ShowRestaurants userInSession={this.state.loggedInUser} />} />
-
             <Route path='/restaurants/:id' render={({ match, location, history }) =>
               <ShowRestaurantsId params={match.params} userInSession={this.state.loggedInUser} />
             } />
-            <Footer />
+            <Footer/>
           </div>
         </div>
       );
@@ -96,8 +95,11 @@ class App extends Component {
               <Route exact path='/signup' render={() => <Signup getUser={this.getTheUser} />} />
               <Route exact path='/login' render={() => <Login getUser={this.getTheUser} />} />
             </Switch>
-          </header>
+            </header>
+            <Route exact path='/' render={() =>
+                <Home />} />
         </div>
+
       );
     }
   }
