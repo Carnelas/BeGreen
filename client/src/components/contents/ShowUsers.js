@@ -24,13 +24,21 @@ class ShowUsers extends Component {
             return (
                 <div className="ShowUsers column is-6 is-offset-3">
                     <h2>Vendedores con artículos disponibles </h2>
+                    <div className="columns">
+                        <div className="column">
+                            <p className="subs">Vendedor</p>
+                        </div>
+                        <div className="column">
+                            <p className="subs">Teléfono</p>
+                        </div>
+                    </div>
                     {this.state.users.map((user, index) => {
                         return (
                             <div className="columns" key={index}>
-                                <div className="column">
+                                <div className="column articles">
                                     <Link to={'/profile/' + user._id}>{user.username}</Link>
                                 </div>
-                                <div className="column">
+                                <div className="column articles">
                                     <p>{user.phone}</p>
                                 </div>
                             </div>

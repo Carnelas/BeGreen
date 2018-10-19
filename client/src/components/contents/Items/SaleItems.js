@@ -21,34 +21,34 @@ class SaleItems extends Component {
     if (this.state.items)
       return (
         <div className="ShowUsers column is-6 is-offset-3">
-          <p>Artículos a la venta: </p>
+          <h2>Artículos a la venta: </h2>
           <div className="columns">
-                <div className="column">
-                  <p>Artículo</p>
+                <div className="sub column">
+                  <p className="subs">Artículo</p>
                 </div>
                 <div className="column">
-                  <p>Precio</p>
+                  <p className="subs">Precio</p>
                 </div>
                 <div className="column">
-                  <p>Vendedor</p>
+                  <p className="subs">Vendedor</p>
                 </div>
                 <div className="column">
-                  <p>Cantidad disponible</p>
+                  <p className="subs">Unidades</p>
                 </div>
               </div>
           <div >{this.state.items.map(item => {
             return (
               <div className="columns">
-                <div className="column">
+                <div className="column articles">
                   <p>{item.itemName}</p>
                 </div>
-                <div className="column">
-                  <p>{item.price}</p>
+                <div className="column articles">
+                  <p>{item.price}€</p>
                 </div>
-                <div className="column">
+                <div className="column articles">
                 <Link to={'/profile/'+ item.sellerId}>{item.sellerName}</Link>
                 </div>
-                <div className="column">
+                <div className="column articles">
                   <p>{item.qty}</p>
                 </div>
               </div>

@@ -23,22 +23,22 @@ class ShowRestaurants extends Component {
         if (this.state.restaurants)
             return (
                 <div className="ShowRestaurants column is-6 is-offset-3">
-                      <h2>Restaurantes Green:</h2>
-                    <div className="columns">
+                    <h2>Restaurantes Green:</h2>
+                    <div className=" columns">
                         <div className="column">
-                            <p>Restaurantes</p>
+                            <p className="subs">Restaurantes</p>
                         </div>
-                        <div className="sub column">
-                            <p>Descripción</p>
+                        <div className="column">
+                            <p className="subs">Descripción</p>
                         </div>
                     </div>
                     {this.state.restaurants.map((restaurant, index) => {
                         return (
                             <div key={index} className="columns">
-                                <div className="column">
+                                <div className="column articles">
                                     <Link to={'/restaurants/' + restaurant._id}>{restaurant.name}</Link>
                                 </div>
-                                <div className="column">
+                                <div className="column articles">
                                     <p>{restaurant.description}</p>
                                 </div>
                             </div>

@@ -30,27 +30,27 @@ class showSellerItems extends Component {
                     <h2>Artículos a la venta de este vendedor:</h2>
                     <div className="columns">
                         <div className="column">
-                            <p>Artículo</p>
+                            <p className="subs">Artículo</p>
                         </div>
                         <div className="column">
-                            <p>Precio</p>
+                            <p className="subs">Precio</p>
                         </div>
                         <div className="column">
-                            <p>Vendedor</p>
+                            <p className="subs">Vendedor</p>
                         </div>
 
                     </div>
                     {this.state.items.map((item, index) => {
                         return (
                             <div key={index} className="columns">
-                                <div className="column">
-                                    {item.itemName}
+                                <div className="column articles">
+                                    <p>{item.itemName}</p>
                                 </div>
-                                <div className="column">
-                                    {item.price}
+                                <div className="column articles">
+                                    <p>{item.price}€</p>
                                 </div>
-                                <div className="column">
-                                    {item.qty}
+                                <div className="column articles">
+                                    <p>{item.qty}</p>
                                 </div>
                             </div>
                         )

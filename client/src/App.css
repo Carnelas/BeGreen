@@ -70,12 +70,7 @@ color: white;
 
 }
 
-.restprofile {
-  margin-top: 25vh;
-  font-size: 3vh;
-  color: #fabada;
-  background-color:rgba(93, 93, 93, 0.493);
-}
+
 
 .ShowUsers{
   margin-top: 25vh;
@@ -119,21 +114,36 @@ fieldset {
     text-align: center;
 }
 
-p {
-  color: white;
-}
+
 
 h1 {
   color: white;
+  font-size: 8vh;
+}
 
+h1:hover{
+  color:green;
+  transition: 3s;
 }
 
 h2 {
   color: white;
-  border-bottom: 3px solid #fabada;
+  border-bottom: 3px solid grey;
   display: inline-block;
+  font-size: 5vh;
 }
 
+h2:hover {
+  color: lightgreen;
+  transition: 1s;
+}
+
+.subs{
+  font-size: 4vh;
+  border-bottom: 0.5px solid grey;
+  display: inline-block;
+  margin-top: 2vh;
+}
 
 h3{
   color: white;
@@ -145,4 +155,28 @@ label {
 
 a {
   color: lightblue;
+}
+
+p {
+  color: white;
+}
+
+.semueve:before{
+content: '';
+position: absolute;
+top: 0px;
+left: 0px;
+width: 0px;
+height: 42px;
+background: rgba(35, 150, 50, 0.972);
+border-radius: 50px;
+transition: all 2s ease;
+}
+
+.semueve:hover:before{
+  width: 100%;
+}
+
+.articles{
+  font-size: 3vh;
 }
