@@ -60,13 +60,13 @@ class AddItems extends Component {
             </div>
             <div className="field is-grouped is-grouped-centered">
               <div className="control">
-                <div className="select">
+                <div className="select is-rounded">
                   <fieldset>
                     <select name="user" onChange={e => this.handleChange(e)} >
                       {
                         this.state.users ? this.state.users.map((user) => {
                           return (
-                            <option value={JSON.stringify({ id: user._id, username: user.username })}>
+                            <option className="option" value={JSON.stringify({ id: user._id, username: user.username })}>
                               {user.username}
                             </option>
                           )
@@ -91,7 +91,7 @@ class AddItems extends Component {
                 </fieldset>
               </div>
             </div>
-            <input type="submit" value="AddItems" className="button is-rounded is-focused is-hovered is-light" />
+            <input type="submit" value="Añadir objetos" className="button is-rounded is-focused is-hovered is-light" />
           </div >
         </form>
       </div>

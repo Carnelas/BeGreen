@@ -111,7 +111,9 @@ fieldset {
     text-align: center;
 }
 
-
+.rest {
+  font-size: 2.5vh;
+}
 
 h1 {
   color: white;

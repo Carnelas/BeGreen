@@ -117,7 +117,7 @@ class SignupRest extends Component {
                         <div className="field-body">
                             <div className="field">
                                 <div className="control">
-                                    <input type="submit" value="Sign up" className="button is-rounded is-focused is-hovered is-light" />
+                                    <input type="submit" value="Añadir restaurante" className="button is-rounded is-focused is-hovered is-light" />
                                 </div>
                             </div>
                         </div>

@@ -39,7 +39,7 @@ class ShowRestaurants extends Component {
                                     <Link to={'/restaurants/' + restaurant._id}>{restaurant.name}</Link>
                                 </div>
                                 <div className="column articles">
-                                    <p>{restaurant.description}</p>
+                                    <p className="rest">{restaurant.description}</p>
                                 </div>
                             </div>
                         )

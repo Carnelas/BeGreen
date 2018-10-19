@@ -36,7 +36,7 @@ class showSellerItems extends Component {
                             <p className="subs">Precio</p>
                         </div>
                         <div className="column">
-                            <p className="subs">Vendedor</p>
+                            <p className="subs">Cantidad</p>
                         </div>
 
                     </div>
@@ -50,7 +50,7 @@ class showSellerItems extends Component {
                                     <p>{item.price}€</p>
                                 </div>
                                 <div className="column articles">
-                                    <p>{item.qty}</p>
+                                    <p>{item.qty}kg</p>
                                 </div>
                             </div>
                         )

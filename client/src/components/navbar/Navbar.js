@@ -30,7 +30,7 @@ class Navbar extends Component {
             <div className="navbar-menu">
               <div className="navbar-start">
                 <Link to='/' className="navbar-item">Home</Link>
-                <Link to='/addobjets' className="navbar-item">Perfil vendedor</Link>
+                <Link to='/addobjets' className="navbar-item">Vender productos</Link>
                 <Link to='/sellers' className="navbar-item">Vendedores</Link>
                 <Link to='/restaurants' className="navbar-item">Restaurantes</Link>
                 <Link to='/restsignup' className="navbar-item">Registro restaurantes</Link>
@@ -38,7 +38,7 @@ class Navbar extends Component {
               <div className="navbar-end">
                 <div className="navbar-item">
                   <div className="buttons">
-                    <button className="button is-rounded is-hovered is-inverted" onClick={this.handleLogout}>Logout</button>
+                    <button className="button is-rounded is-hovered is-inverted" onClick={this.handleLogout}>Salir</button>
                   </div>
                 </div>
               </div>
