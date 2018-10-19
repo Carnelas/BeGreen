@@ -38,7 +38,7 @@ class Signup extends Component {
   render() {
     if(this.state.redirect) return <Redirect to='/'/>
     return (
-      <div className="signup">
+      <div className="signup column is-6 is-offset-3">
         <h3>¡Bienvenido! Crea tu cuenta aquí:</h3>
         <form onSubmit={this.handleFormSubmit}>
           <div className="column is-6 is-offset-3">

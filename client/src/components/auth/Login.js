@@ -42,7 +42,7 @@ class Login extends Component {
   render() {
     if(this.state.redirect) return <Redirect to='/'/>
     return (
-      <div className="login">
+      <div className="login column is-6 is-offset-3">
         <h3>¡Hola! Bienvenido de nuevo</h3>
         <form onSubmit={this.handleFormSubmit}>
           <div className="column is-6 is-offset-3">
